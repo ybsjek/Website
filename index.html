@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Northwest Judgment Enforcement | Professional Asset Recovery & Enforcement Assistance</title>
+    <title>Northwest Judgment Enforcement | We Help You Collect Your Court Judgments</title>
     <style>
         :root {
             --primary: #0f1e36; /* Deep Corporate Navy */
@@ -20,7 +20,7 @@
         header { background: var(--primary); padding: 15px 10px; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.15); }
         .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
         
-        /* Enlarged Logo Layout */
+        /* Logo Layout */
         .logo-container { display: flex; align-items: center; text-decoration: none; }
         .logo-img { height: 65px; width: auto; object-fit: contain; margin-right: 15px; }
         .logo-text { color: var(--text-light); font-size: 1.4rem; font-weight: bold; letter-spacing: 0.5px; }
@@ -49,19 +49,14 @@
         .about-card { background: var(--bg-light); padding: 35px; border-left: 5px solid var(--secondary); border-radius: var(--roundness); box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
         .about-card h3 { margin-bottom: 15px; color: var(--primary); }
 
-        /* Rounded Mechanisms Grid */
+        /* Rounded Tools Grid */
         .tools-container { background: #ffffff; padding: 20px 0; }
-        .tools-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; list-style: none; margin-top: 20px; }
+        .tools-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; list-style: none; margin-top: 20px; }
         .tools-item { background: var(--bg-light); padding: 25px; border-radius: var(--roundness); border-top: 4px solid var(--primary); font-weight: 600; color: var(--primary); text-align: center; box-shadow: 0 6px 15px rgba(0,0,0,0.04); transition: transform 0.2s; }
         .tools-item:hover { transform: translateY(-3px); }
 
-        /* Small Claims Dedicated Section */
-        .small-claims-box { background: var(--primary); color: var(--text-light); padding: 50px; border-radius: var(--roundness); text-align: center; box-shadow: 0 10px 30px rgba(15,30,54,0.15); }
-        .small-claims-box h3 { color: var(--secondary); font-size: 1.8rem; margin-bottom: 15px; }
-        .small-claims-box p { font-size: 1.1rem; max-width: 800px; margin: 0 auto 20px auto; color: #cbd5e0; }
-
-        /* Contact Section & Form */
-        .contact-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; }
+        /* Contact Section Grid */
+        .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
         .contact-info h3 { margin-bottom: 20px; color: var(--primary); }
         .contact-info p { margin-bottom: 15px; }
         .contact-highlight { font-size: 1.1rem; color: var(--text-dark); margin: 12px 0; background: #ffffff; padding: 10px 15px; border-radius: var(--roundness); box-shadow: 0 2px 6px rgba(0,0,0,0.02); display: inline-block; width: 100%; max-width: 350px; }
@@ -69,11 +64,13 @@
         .contact-highlight a { color: var(--text-dark); text-decoration: none; font-weight: 600; }
         .contact-highlight a:hover { color: var(--secondary); text-decoration: underline; }
         
-        form { display: flex; flex-direction: column; background: #ffffff; padding: 30px; border-radius: var(--roundness); box-shadow: 0 10px 30px rgba(0,0,0,0.04); }
-        input, select, textarea { padding: 14px; margin-bottom: 18px; border: 1px solid #cbd5e0; border-radius: var(--roundness); font-size: 1rem; transition: border-color 0.3s, box-shadow 0.3s; background-color: #ffffff; }
-        input:focus, select:focus, textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(15, 30, 86, 0.1); }
-        form button { background: var(--primary); color: white; border: none; padding: 16px; border-radius: var(--roundness); font-weight: bold; cursor: pointer; transition: background 0.3s, transform 0.2s; }
-        form button:hover { background: #1a335a; transform: translateY(-1px); }
+        /* Form Display Block */
+        .intake-form-box { display: block; background: #ffffff; padding: 30px; border-radius: var(--roundness); box-shadow: 0 10px 30px rgba(0,0,0,0.04); width: 100%; }
+        .intake-form-box form { display: flex; flex-direction: column; background: none; padding: 0; border-radius: 0; box-shadow: none; }
+        .intake-form-box input, .intake-form-box select, .intake-form-box textarea { padding: 14px; margin-bottom: 18px; border: 1px solid #cbd5e0; border-radius: var(--roundness); font-size: 1rem; transition: border-color 0.3s, box-shadow 0.3s; background-color: #ffffff; width: 100%; color: var(--text-dark); }
+        .intake-form-box input:focus, .intake-form-box select:focus, .intake-form-box textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(15, 30, 86, 0.1); }
+        .intake-form-box button { background: var(--primary); color: white; border: none; padding: 16px; border-radius: var(--roundness); font-weight: bold; cursor: pointer; transition: background 0.3s, transform 0.2s; width: 100%; font-size: 1rem; }
+        .intake-form-box button:hover { background: #1a335a; transform: translateY(-1px); }
 
         /* Footer */
         footer { background: var(--primary); color: #a0aec0; padding: 50px 20px; text-align: center; font-size: 0.9rem; border-top: 3px solid var(--secondary); line-height: 1.8; }
@@ -89,6 +86,7 @@
             nav a { margin: 8px 0; }
             .nav-phone { margin-left: 0; margin-top: 8px; }
             .hero { padding-top: 300px; }
+            .contact-container { grid-template-columns: 1fr; gap: 30px; }
         }
     </style>
 </head>
@@ -102,43 +100,49 @@
                 <div class="logo-text">Northwest <span>Judgment Enforcement</span></div>
             </a>
             <nav>
-                <a href="#about">Our Services</a>
-                <a href="#tools">Mechanisms</a>
-                <a href="#small-claims">Small Claims</a>
+                <a href="#about">What We Do</a>
+                <a href="#tools">How We Collect</a>
                 <a href="#contact">Contact</a>
                 <a href="tel:5098026893" class="nav-phone">(509) 802-6893</a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero / Introduction (All Judgment Types) -->
+    <!-- Hero / Introduction -->
     <div class="hero">
-        <h1>Professional Judgment Enforcement & Asset Recovery Assistance</h1>
-        <p>Providing strategic, compliant operational assistance to successfully execute all categories of outstanding, court-ordered civil and commercial judgments across the Pacific Northwest.</p>
-        <a href="#contact" class="btn">Request Enforcement Assistance</a>
+        <h1>Won Your Court Case But Haven't Been Paid?</h1>
+        <p>Winning in court is hard enough. Finding the money can be even harder. We help regular people and businesses track down hidden assets and finally get the money they are owed.</p>
+        <a href="#contact" class="btn">Get Help Collecting Your Money</a>
     </div>
 
-    <!-- Corporate Overview Section (All Judgment Types) -->
+    <!-- Corporate Overview Section -->
     <section id="about">
-        <h2 class="section-title">What We Do</h2>
+        <h2 class="section-title">How We Help You</h2>
         <div class="about-grid">
             <div class="about-card">
-                <h3>Enforcement Assistance</h3>
-                <p>We provide comprehensive operational assistance to judgment creditors trying to collect on final civil, corporate, and specialized court decisions. Our corporate service manages the intensive tracking and asset execution tracking required to bring cases to a resolution.</p>
+                <h3>Judgment Collection Assistance</h3>
+                <p>If you won a court case and the other party refuses to pay, we take over the stressful part. We handle the paperwork, track the deadlines, and keep the pressure on the debtor until the account is settled.</p>
             </div>
             <div class="about-card">
-                <h3>Asset Location & Profiling</h3>
-                <p>Our company specializes in mapping financial footprints. We evaluate corporate histories, uncover concealed accounts, follow payroll and employment channels, and track property holdings to trace recoverable paths for our clients.</p>
+                <h3>Asset Hunting & Background Checks</h3>
+                <p>People who owe money love to hide it. Our team specializes in digging deep to find hidden bank accounts, active employment records, secret business links, and property holdings that can be used to pay off your judgment.</p>
             </div>
         </div>
     </section>
 
-    <!-- Tools / Mechanisms Section -->
+    <!-- Tools Grid Section -->
     <section id="tools" class="tools-container">
-        <h2 class="section-title">Enforcement Mechanisms Utilized</h2>
+        <h2 class="section-title">Ways We Get You Paid</h2>
         <p style="text-align: center; max-width: 700px; margin: -20px auto 30px auto; color: var(--text-dark);">
-            We deploy highly targeted discovery and collection tracking mechanisms to systematically target the outstanding balances mandated by the courts.
+            We use every legal tool available to tap into the debtor's income and property so your court order doesn't just sit on a shelf.
         </p>
         <ul class="tools-list">
             <li class="tools-item">Wage Garnishment</li>
             <li class="tools-item">Property Liens</li>
+            <li class="tools-item">Asset Seizures</li>
+            <li class="tools-item">Confiscation of Intellectual Property</li>
+            <li class="tools-item">Court Ordered Debtors Examinations</li>
+            <li class="tools-item">Sheriff's Sale of Property</li>
+        </ul>
+    </section>
+
