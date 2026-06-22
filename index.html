@@ -6,56 +6,49 @@
     <title>Northwest Judgment Enforcement | We Help You Collect Your Court Judgments</title>
     <style>
         :root {
-            --primary: #0f1e36; /* Deep Corporate Navy */
-            --secondary: #8a7355; /* Muted Gold / Accent */
+            --primary: #0f1e36;
+            --secondary: #8a7355;
             --text-dark: #2d3748;
             --text-light: #f7fafc;
             --bg-light: #f8f9fa;
-            --roundness: 12px; /* Controls the global rounded style */
+            --roundness: 12px;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { color: var(--text-dark); line-height: 1.6; background-color: #ffffff; }
-        
-        /* Header & Navigation */
+
         header { background: var(--primary); padding: 15px 10px; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.15); }
         .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        
-        /* Logo Layout */
+
         .logo-container { display: flex; align-items: center; text-decoration: none; }
         .logo-img { height: 65px; width: auto; object-fit: contain; margin-right: 15px; }
         .logo-text { color: var(--text-light); font-size: 1.4rem; font-weight: bold; letter-spacing: 0.5px; }
         .logo-text span { color: var(--secondary); }
-        
+
         nav { display: flex; align-items: center; }
         nav a { color: var(--text-light); text-decoration: none; margin-left: 25px; font-size: 0.95rem; transition: color 0.3s; }
         nav a:hover { color: var(--secondary); }
         .nav-phone { color: var(--secondary); font-weight: bold; margin-left: 25px; text-decoration: none; background: rgba(138, 115, 85, 0.1); padding: 8px 16px; border-radius: var(--roundness); transition: background 0.3s; }
         .nav-phone:hover { background: rgba(138, 115, 85, 0.2); text-decoration: none; }
 
-        /* Hero Section */
         .hero { background: linear-gradient(rgba(15, 30, 54, 0.95), rgba(15, 30, 54, 0.85)), url('https://unsplash.com') no-repeat center center/cover; padding: 220px 20px 140px 20px; color: var(--text-light); text-align: center; }
         .hero h1 { font-size: 2.8rem; margin-bottom: 20px; font-weight: 600; }
         .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 35px auto; color: #cbd5e0; }
         .btn { background: var(--secondary); color: var(--text-light); padding: 14px 35px; text-decoration: none; border-radius: var(--roundness); font-weight: bold; transition: background 0.3s, transform 0.2s; display: inline-block; }
         .btn:hover { background: #735f43; transform: translateY(-1px); }
 
-        /* Section Styling */
-        section { padding: 90px 20px; max-width: 1200px; margin: 0 auto; }
+        section { padding: 90px 20px; max-width: 1200px; margin: 0 auto; clear: both; }
         .section-title { text-align: center; margin-bottom: 40px; position: relative; padding-bottom: 15px; font-size: 2rem; color: var(--primary); }
         .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 50px; height: 3px; background: var(--secondary); border-radius: 2px; }
 
-        /* Overview Section Cards */
         .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 20px; }
         .about-card { background: var(--bg-light); padding: 35px; border-left: 5px solid var(--secondary); border-radius: var(--roundness); box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
         .about-card h3 { margin-bottom: 15px; color: var(--primary); }
 
-        /* Rounded Tools Grid */
-        .tools-container { background: #ffffff; padding: 20px 0; }
-        .tools-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; list-style: none; margin-top: 20px; }
-        .tools-item { background: var(--bg-light); padding: 25px; border-radius: var(--roundness); border-top: 4px solid var(--primary); font-weight: 600; color: var(--primary); text-align: center; box-shadow: 0 6px 15px rgba(0,0,0,0.04); transition: transform 0.2s; }
+        .tools-container { background: #ffffff; padding: 40px 0; width: 100%; display: block; height: auto; overflow: hidden; }
+        .tools-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; list-style: none; margin-top: 20px; width: 100%; }
+        .tools-item { background: var(--bg-light); padding: 25px; border-radius: var(--roundness); border-top: 4px solid var(--primary); font-weight: 600; color: var(--primary); text-align: center; box-shadow: 0 6px 15px rgba(0,0,0,0.04); transition: transform 0.2s; display: flex; align-items: center; justify-content: center; min-height: 95px; }
         .tools-item:hover { transform: translateY(-3px); }
 
-        /* Contact Section Grid */
         .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
         .contact-info h3 { margin-bottom: 20px; color: var(--primary); }
         .contact-info p { margin-bottom: 15px; }
@@ -63,21 +56,45 @@
         .contact-highlight strong { color: var(--primary); display: inline-block; width: 70px; }
         .contact-highlight a { color: var(--text-dark); text-decoration: none; font-weight: 600; }
         .contact-highlight a:hover { color: var(--secondary); text-decoration: underline; }
-        
-        /* Form Display Block */
+
         .intake-form-box { display: block; background: #ffffff; padding: 30px; border-radius: var(--roundness); box-shadow: 0 10px 30px rgba(0,0,0,0.04); width: 100%; }
         .intake-form-box form { display: flex; flex-direction: column; background: none; padding: 0; border-radius: 0; box-shadow: none; }
-        .intake-form-box input, .intake-form-box select, .intake-form-box textarea { padding: 14px; margin-bottom: 18px; border: 1px solid #cbd5e0; border-radius: var(--roundness); font-size: 1rem; transition: border-color 0.3s, box-shadow 0.3s; background-color: #ffffff; width: 100%; color: var(--text-dark); }
-        .intake-form-box input:focus, .intake-form-box select:focus, .intake-form-box textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(15, 30, 86, 0.1); }
-        .intake-form-box button { background: var(--primary); color: white; border: none; padding: 16px; border-radius: var(--roundness); font-weight: bold; cursor: pointer; transition: background 0.3s, transform 0.2s; width: 100%; font-size: 1rem; }
+        .intake-form-box label { margin-bottom: 8px; font-weight: 600; color: var(--primary); }
+        .intake-form-box input, .intake-form-box select, .intake-form-box textarea {
+            padding: 14px;
+            margin-bottom: 18px;
+            border: 1px solid #cbd5e0;
+            border-radius: var(--roundness);
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            background-color: #ffffff;
+            width: 100%;
+            color: var(--text-dark);
+        }
+        .intake-form-box input:focus, .intake-form-box select:focus, .intake-form-box textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(15, 30, 86, 0.1);
+        }
+        .intake-form-box button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: var(--roundness);
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            width: 100%;
+            font-size: 1rem;
+        }
         .intake-form-box button:hover { background: #1a335a; transform: translateY(-1px); }
 
-        /* Footer */
-        footer { background: var(--primary); color: #a0aec0; padding: 50px 20px; text-align: center; font-size: 0.9rem; border-top: 3px solid var(--secondary); line-height: 1.8; }
+        footer { background: var(--primary); color: #a0aec0; padding: 50px 20px; text-align: center; font-size: 0.9rem; border-top: 3px solid var(--secondary); line-height: 1.8; width: 100%; clear: both; }
         footer p { max-width: 1200px; margin: 0 auto; }
         footer a { color: #cbd5e0; text-decoration: none; }
         footer a:hover { color: var(--secondary); }
-        
+
         @media (max-width: 992px) {
             .nav-container { flex-direction: column; text-align: center; }
             .logo-container { margin-bottom: 15px; justify-content: center; }
@@ -92,7 +109,6 @@
 </head>
 <body>
 
-    <!-- Navigation Header -->
     <header>
         <div class="nav-container">
             <a href="#" class="logo-container">
@@ -108,14 +124,12 @@
         </div>
     </header>
 
-    <!-- Hero / Introduction -->
     <div class="hero">
         <h1>Won Your Court Case But Haven't Been Paid?</h1>
         <p>Winning in court is hard enough. Finding the money can be even harder. We help regular people and businesses track down hidden assets and finally get the money they are owed.</p>
         <a href="#contact" class="btn">Get Help Collecting Your Money</a>
     </div>
 
-    <!-- Corporate Overview Section -->
     <section id="about">
         <h2 class="section-title">How We Help You</h2>
         <div class="about-grid">
@@ -130,7 +144,6 @@
         </div>
     </section>
 
-    <!-- Tools Grid Section -->
     <section id="tools" class="tools-container">
         <h2 class="section-title">Ways We Get You Paid</h2>
         <p style="text-align: center; max-width: 700px; margin: -20px auto 30px auto; color: var(--text-dark);">
@@ -138,11 +151,59 @@
         </p>
         <ul class="tools-list">
             <li class="tools-item">Wage Garnishment</li>
+            <li class="tools-item">Bank Account Garnishment</li>
             <li class="tools-item">Property Liens</li>
+            <li class="tools-item">Real Estate Judgment Liens</li>
             <li class="tools-item">Asset Seizures</li>
-            <li class="tools-item">Confiscation of Intellectual Property</li>
-            <li class="tools-item">Court Ordered Debtors Examinations</li>
-            <li class="tools-item">Sheriff's Sale of Property</li>
+            <li class="tools-item">Supplemental Proceedings</li>
+            <li class="tools-item">Debtor Asset Investigations</li>
+            <li class="tools-item">Collection Agency Coordination</li>
         </ul>
     </section>
 
+    <section id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>Tell us about your judgment, the debtor, and what you already know about their assets. We’ll review your situation and discuss the next steps.</p>
+                <div class="contact-highlight"><strong>Phone:</strong> <a href="tel:5098026893">(509) 802-6893</a></div>
+                <div class="contact-highlight"><strong>Email:</strong> <a href="mailto:info@northwestjudgmentenforcement.com">info@northwestjudgmentenforcement.com</a></div>
+                <div class="contact-highlight"><strong>Area:</strong> Washington State</div>
+            </div>
+
+            <div class="intake-form-box">
+                <form action="#" method="post">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="case-type">Type of Judgment</label>
+                    <select id="case-type" name="case-type" required>
+                        <option value="">Select one</option>
+                        <option value="small-claims">Small Claims</option>
+                        <option value="civil">Civil Judgment</option>
+                        <option value="business">Business/Commercial Judgment</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="message">Tell Us About Your Case</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Northwest Judgment Enforcement. All rights reserved. <a href="#contact">Contact</a> | <a href="tel:5098026893">(509) 802-6893</a></p>
+    </footer>
+
+</body>
+</html>
