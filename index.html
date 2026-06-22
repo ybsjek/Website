@@ -16,18 +16,26 @@
         body { color: var(--text-dark); line-height: 1.6; background-color: #ffffff; }
         
         /* Header & Navigation */
-        header { background: var(--primary); padding: 20px 10px; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        header { background: var(--primary); padding: 10px 10px; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .logo { color: var(--text-light); font-size: 1.4rem; font-weight: bold; letter-spacing: 0.5px; }
-        .logo span { color: var(--secondary); }
+        
+        /* Logo Layout */
+        .logo-container { display: flex; align-items: center; text-decoration: none; }
+        .logo-img { height: 45px; width: auto; object-fit: contain; margin-right: 12px; }
+        .logo-text { color: var(--text-light); font-size: 1.3rem; font-weight: bold; letter-spacing: 0.5px; }
+        .logo-text span { color: var(--secondary); }
+        
+        nav { display: flex; align-items: center; }
         nav a { color: var(--text-light); text-decoration: none; margin-left: 20px; font-size: 0.95rem; transition: color 0.3s; }
         nav a:hover { color: var(--secondary); }
+        .nav-phone { color: var(--secondary); font-weight: bold; margin-left: 20px; text-decoration: none; }
+        .nav-phone:hover { text-decoration: underline; }
 
         /* Hero Section */
-        .hero { background: linear-gradient(rgba(15, 30, 54, 0.95), rgba(15, 30, 54, 0.85)), url('https://unsplash.com') no-repeat center center/cover; padding: 180px 20px 120px 20px; color: var(--text-light); text-align: center; }
+        .hero { background: linear-gradient(rgba(15, 30, 54, 0.95), rgba(15, 30, 54, 0.85)), url('https://unsplash.com') no-repeat center center/cover; padding: 190px 20px 130px 20px; color: var(--text-light); text-align: center; }
         .hero h1 { font-size: 2.8rem; margin-bottom: 20px; font-weight: 600; }
         .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px auto; color: #cbd5e0; }
-        .btn { background: var(--secondary); color: var(--text-light); padding: 12px 30px; text-decoration: none; border-radius: 4px; font-weight: bold; transition: background 0.3s; inline-block; }
+        .btn { background: var(--secondary); color: var(--text-light); padding: 12px 30px; text-decoration: none; border-radius: 4px; font-weight: bold; transition: background 0.3s; display: inline-block; }
         .btn:hover { background: #735f43; }
 
         /* Section Styling */
@@ -40,18 +48,14 @@
         .about-card { background: var(--bg-light); padding: 30px; border-left: 4px solid var(--secondary); border-radius: 4px; }
         .about-card h3 { margin-bottom: 15px; color: var(--primary); }
 
-        /* Blog Section */
-        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .blog-post { border: 1px solid #e2e8f0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-        .blog-content { padding: 20px; }
-        .blog-date { font-size: 0.8rem; color: #a0aec0; margin-bottom: 10px; }
-        .blog-post h3 { margin-bottom: 10px; color: var(--primary); font-size: 1.25rem; }
-        .blog-link { color: var(--secondary); text-decoration: none; font-weight: bold; font-size: 0.9rem; }
-
         /* Contact Section & Form */
         .contact-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; }
         .contact-info h3 { margin-bottom: 20px; color: var(--primary); }
         .contact-info p { margin-bottom: 15px; }
+        .contact-highlight { font-size: 1.1rem; color: var(--text-dark); margin: 10px 0; }
+        .contact-highlight strong { color: var(--primary); display: inline-block; width: 70px; }
+        .contact-highlight a { color: var(--text-dark); text-decoration: none; font-weight: 600; }
+        .contact-highlight a:hover { color: var(--secondary); text-decoration: underline; }
         form { display: flex; flex-direction: column; }
         input, textarea { padding: 12px; margin-bottom: 15px; border: 1px solid #cbd5e0; border-radius: 4px; font-size: 1rem; }
         input:focus, textarea:focus { outline: none; border-color: var(--primary); }
@@ -59,13 +63,18 @@
         form button:hover { background: #1a335a; }
 
         /* Footer */
-        footer { background: var(--primary); color: #a0aec0; padding: 40px 20px; text-align: center; font-size: 0.9rem; border-top: 3px solid var(--secondary); }
+        footer { background: var(--primary); color: #a0aec0; padding: 40px 20px; text-align: center; font-size: 0.9rem; border-top: 3px solid var(--secondary); line-height: 1.8; }
         footer p { max-width: 1100px; margin: 0 auto; }
+        footer a { color: #cbd5e0; text-decoration: none; }
+        footer a:hover { color: var(--secondary); }
         
         @media (max-width: 768px) {
             .nav-container { flex-direction: column; text-align: center; }
-            .logo { margin-bottom: 15px; }
-            nav a { margin: 0 10px; }
+            .logo-container { margin-bottom: 10px; justify-content: center; }
+            .logo-img { height: 38px; }
+            nav { flex-direction: column; }
+            nav a { margin: 5px 0; }
+            .nav-phone { margin-left: 0; margin-top: 5px; }
             .hero h1 { font-size: 2rem; }
         }
     </style>
@@ -75,11 +84,15 @@
     <!-- Navigation Header -->
     <header>
         <div class="nav-container">
-            <div class="logo">Northwest <span>Judgment Enforcement</span></div>
+            <a href="#" class="logo-container">
+                <!-- Expects a file named logo.png inside your main GitHub folder -->
+                <img src="logo.png" alt="Logo" class="logo-img" onerror="this.style.display='none'">
+                <div class="logo-text">Northwest <span>Judgment Enforcement</span></div>
+            </a>
             <nav>
                 <a href="#about">Our Firm</a>
-                <a href="#blog">Legal Insights</a>
                 <a href="#contact">Contact</a>
+                <a href="tel:5098026893" class="nav-phone">(509) 802-6893</a>
             </nav>
         </div>
     </header>
@@ -106,55 +119,43 @@
         </div>
     </section>
 
-    <!-- Blog / Legal Insights Section -->
-    <section id="blog" style="background-color: var(--bg-light);">
-        <h2 class="section-title">Legal Insights & Articles</h2>
-        <div class="blog-grid">
-            <div class="blog-post">
-                <div class="blog-content">
-                    <div class="blog-date">June 20, 2026</div>
-                    <h3>Understanding Asset Shielding in the Northwest</h3>
-                    <p>An overview of the legal frameworks debtors utilize to hide assets, and the legal toolsets available to pierce those protections.</p>
-                    <a href="#" class="blog-link">Read Article →</a>
-                </div>
-            </div>
-            <div class="blog-post">
-                <div class="blog-content">
-                    <div class="blog-date">May 14, 2026</div>
-                    <h3>The Lifespan of a Judicial Judgment</h3>
-                    <p>How long do you have to enforce a judgment, and what steps must your firm take to properly renew it before expiration?</p>
-                    <a href="#" class="blog-link">Read Article →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
-    <section id="contact">
-        <h2 class="section-title">Confidential Case Evaluation</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Connect With Us</h3>
-                <p>Submit your verified judgment details via our secure intake channel. A specialized case representative will review the documentation to evaluate recovery viability.</p>
-                <p><strong>Office Hours:</strong> Mon - Fri, 9:00 AM - 5:00 PM PST</p>
-            </div>
-            <div>
-                <!-- Formspree.io integration recommended for static GitHub pages form handling -->
-                <form action="https://formspree.io" method="POST">
-                    <input type="text" name="name" placeholder="Your Name / Firm Name" required>
-                    <input type="email" name="email" placeholder="Email Address" required>
-                    <input type="text" name="judgment_amount" placeholder="Judgment Amount ($)" required>
-                    <textarea name="message" rows="5" placeholder="Briefly describe your case requirements..." required></textarea>
-                    <button type="submit">Submit Inquiry</button>
-                </form>
+    <section id="contact" style="background-color: var(--bg-light); max-width: 100%; padding: 80px 0;">
+        <div style="max-width: 1100px; margin: 0 auto; padding: 0 20px;">
+            <h2 class="section-title">Confidential Case Evaluation</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Connect With Us</h3>
+                    <p>Submit your verified judgment details via our secure intake channel. A specialized case representative will review the documentation to evaluate recovery viability.</p>
+                    
+                    <div class="contact-highlight" style="margin-top: 20px;">
+                        <strong>Phone:</strong> <a href="tel:5098026893">(509) 802-6893</a>
+                    </div>
+                    <div class="contact-highlight">
+                        <strong>Email:</strong> <a href="mailto:nwjudgmentenforcement@gmail.com">nwjudgmentenforcement@gmail.com</a>
+                    </div>
+
+                    <p style="margin-top: 20px;"><strong>Office Hours:</strong> Mon - Fri, 9:00 AM - 5:00 PM PST</p>
+                </div>
+                <div>
+                    <!-- Formspree.io integration recommended for static GitHub pages form handling -->
+                    <form action="https://formspree.io" method="POST">
+                        <input type="text" name="name" placeholder="Your Name / Firm Name" required>
+                        <input type="email" name="email" placeholder="Email Address" required>
+                        <input type="text" name="judgment_amount" placeholder="Judgment Amount ($)" required>
+                        <textarea name="message" rows="5" placeholder="Briefly describe your case requirements..." required></textarea>
+                        <button type="submit">Submit Inquiry</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Northwest Judgment Enforcement. All rights reserved. <br>
-        <span style="font-size: 0.8rem; display:block; margin-top:10px; color:#718096;">Disclaimer: Submission of an inquiry does not constitute an attorney-client relationship. Northwest Judgment Enforcement operates as a professional legal judgment recovery firm.</span></p>
+        <p>&copy; 2026 Northwest Judgment Enforcement LLC. All rights reserved. <br>
+        Phone: <a href="tel:5098026893">(509) 802-6893</a> | Email: <a href="mailto:nwjudgmentenforcement@gmail.com">nwjudgmentenforcement@gmail.com</a><br>
+        <span style="font-size: 0.8rem; display:block; margin-top:10px; color:#718096;">Disclaimer: Submission of an inquiry does not constitute an attorney-client relationship. Northwest Judgment Enforcement LLC operates as a professional legal judgment recovery firm.</span></p>
     </footer>
 
 </body>
