@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Northwest Judgment Enforcement</title>
+    <style>
+        :root {
+            --primary: #0f1e36;
+            --secondary: #8a7355;
+            --text-dark: #2d3748;
+            --text-light: #f7fafc;
+            --bg-light: #f8f9fa;
+            --roundness: 12px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        header {
+            background: var(--primary);
+            padding: 15px 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 65px;
+            width: auto;
+            object-fit: contain;
+            margin-right: 15px;
+        }
+
+        .logo-text {
+            color: var(--text-light);
+            font-size: 1.4rem;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-text span {
+            color: var(--secondary);
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        .page-wrap {
+            padding: 170px 20px 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .contact-card {
+            background: var(--bg-light);
+            padding: 35px;
+            border-radius: var(--roundness);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+        }
+
+        .contact-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .contact-card p {
+            margin-bottom: 15px;
+        }
+
+        .contact-highlight {
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            margin: 12px 0;
+            background: #ffffff;
+            padding: 10px 15px;
+            border-radius: var(--roundness);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            display: inline-block;
+            width: 100%;
+        }
+
+        .contact-highlight strong {
+            color: var(--primary);
+            display: inline-block;
+            width: 70px;
+        }
+
+        .contact-highlight a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-highlight a:hover {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+
+        .form-box {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: var(--roundness);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+        }
+
+        .form-box form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-box label {
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .form-box input,
+        .form-box textarea {
+            padding: 14px;
+            margin-bottom: 18px;
+            border: 1px solid #cbd5e0;
+            border-radius: var(--roundness);
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            background-color: #ffffff;
+            width: 100%;
+            color: var(--text-dark);
+        }
+
+        .form-box input:focus,
+        .form-box textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(15, 30, 86, 0.1);
+        }
+
+        .form-box button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: var(--roundness);
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        .form-box button:hover {
+            background: #1a335a;
+            transform: translateY(-1px);
+        }
+
+        .thank-you {
+            margin-top: 20px;
+            padding: 14px 16px;
+            border-left: 5px solid var(--secondary);
+            background: #fffaf1;
+            border-radius: 10px;
+            color: var(--text-dark);
+        }
+
+        footer {
+            background: var(--primary);
+            color: #a0aec0;
+            padding: 50px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 3px solid var(--secondary);
+            line-height: 1.8;
+            width: 100%;
+            clear: both;
+        }
+
+        footer a {
+            color: #cbd5e0;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--secondary);
+        }
+
+        @media (max-width: 992px) {
+            .nav-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo-container {
+                margin-bottom: 15px;
+                justify-content: center;
+            }
+
+            .logo-img {
+                height: 55px;
+            }
+
+            nav {
+                display: flex;
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 8px 0;
+            }
+
+            .page-wrap {
+                padding-top: 240px;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                <img src="logo.png" alt="Logo" class="logo-img" onerror="this.style.display='none'">
+                <div class="logo-text">Northwest <span>Judgment Enforcement</span></div>
+            </a>
+            <nav>
+                <a href="index.html#about">What We Do</a>
+                <a href="index.html#tools">How We Collect</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-wrap">
+        <h1 class="section-title">Contact Us</h1>
+
+        <div class="contact-container">
+            <div class="form-box">
+                <form action="#" method="post">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="message">Tell Us About Your Case</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+
+                <div class="thank-you">
+                    Thanks for reaching out. We’ll review your message and get back to you as soon as possible.
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h3>Company Contact Information</h3>
+                <p>Reach out directly using the information below.</p>
+
+                <div class="contact-highlight">
+                    <strong>Phone:</strong> <a href="tel:5098026893">(509) 802-6893</a>
+                </div>
+
+                <div class="contact-highlight">
+                    <strong>Email:</strong> <a href="mailto:info@northwestjudgmentenforcement.com">info@northwestjudgmentenforcement.com</a>
+                </div>
+
+                <div class="contact-highlight">
+                    <strong>Area:</strong> Washington State
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Northwest Judgment Enforcement. All rights reserved. <a href="index.html">Home</a></p>
+    </footer>
+
+</body>
+</html>
