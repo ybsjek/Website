@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Northwest Judgment Enforcement</title>
     <style>
         :root {
@@ -14,9 +15,7 @@
             --roundness: 12px;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
         * {
             box-sizing: border-box;
@@ -81,9 +80,7 @@
             transition: color 0.3s;
         }
 
-        nav a:hover {
-            color: var(--secondary);
-        }
+        nav a:hover { color: var(--secondary); }
 
         .page-wrap {
             padding: 170px 20px 80px 20px;
@@ -220,13 +217,10 @@
             transform: translateY(-1px);
         }
 
-        .thank-you {
-            margin-top: 20px;
-            padding: 14px 16px;
-            border-left: 5px solid var(--secondary);
-            background: #fffaf1;
-            border-radius: 10px;
-            color: var(--text-dark);
+        .help-text {
+            margin-top: 14px;
+            font-size: 0.95rem;
+            color: #718096;
         }
 
         footer {
@@ -306,7 +300,7 @@
 
         <div class="contact-container">
             <div class="form-box">
-                <form action="#" method="post">
+                <form action="thank-you.html" method="get">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" required>
 
@@ -322,9 +316,7 @@
                     <button type="submit">Send Message</button>
                 </form>
 
-                <div class="thank-you">
-                    Thanks for reaching out. We’ll review your message and get back to you as soon as possible.
-                </div>
+                <p class="help-text">After you submit, you’ll be taken to a thank you page.</p>
             </div>
 
             <div class="contact-card">
