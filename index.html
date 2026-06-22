@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northwest Judgment Enforcement | Professional Asset Recovery</title>
+    <style>
+        :root {
+            --primary: #0f1e36; /* Deep Corporate Navy */
+            --secondary: #8a7355; /* Muted Gold / Accent */
+            --text-dark: #2d3748;
+            --text-light: #f7fafc;
+            --bg-light: #f8f9fa;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--text-dark); line-height: 1.6; background-color: #ffffff; }
+        
+        /* Header & Navigation */
+        header { background: var(--primary); padding: 20px 10px; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { color: var(--text-light); font-size: 1.4rem; font-weight: bold; letter-spacing: 0.5px; }
+        .logo span { color: var(--secondary); }
+        nav a { color: var(--text-light); text-decoration: none; margin-left: 20px; font-size: 0.95rem; transition: color 0.3s; }
+        nav a:hover { color: var(--secondary); }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(15, 30, 54, 0.95), rgba(15, 30, 54, 0.85)), url('https://unsplash.com') no-repeat center center/cover; padding: 180px 20px 120px 20px; color: var(--text-light); text-align: center; }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 20px; font-weight: 600; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px auto; color: #cbd5e0; }
+        .btn { background: var(--secondary); color: var(--text-light); padding: 12px 30px; text-decoration: none; border-radius: 4px; font-weight: bold; transition: background 0.3s; inline-block; }
+        .btn:hover { background: #735f43; }
+
+        /* Section Styling */
+        section { padding: 80px 20px; max-width: 1100px; margin: 0 auto; }
+        .section-title { text-align: center; margin-bottom: 40px; position: relative; padding-bottom: 10px; font-size: 2rem; color: var(--primary); }
+        .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 50px; height: 3px; background: var(--secondary); }
+
+        /* About / Philosophy */
+        .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 20px; }
+        .about-card { background: var(--bg-light); padding: 30px; border-left: 4px solid var(--secondary); border-radius: 4px; }
+        .about-card h3 { margin-bottom: 15px; color: var(--primary); }
+
+        /* Blog Section */
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .blog-post { border: 1px solid #e2e8f0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .blog-content { padding: 20px; }
+        .blog-date { font-size: 0.8rem; color: #a0aec0; margin-bottom: 10px; }
+        .blog-post h3 { margin-bottom: 10px; color: var(--primary); font-size: 1.25rem; }
+        .blog-link { color: var(--secondary); text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+
+        /* Contact Section & Form */
+        .contact-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; }
+        .contact-info h3 { margin-bottom: 20px; color: var(--primary); }
+        .contact-info p { margin-bottom: 15px; }
+        form { display: flex; flex-direction: column; }
+        input, textarea { padding: 12px; margin-bottom: 15px; border: 1px solid #cbd5e0; border-radius: 4px; font-size: 1rem; }
+        input:focus, textarea:focus { outline: none; border-color: var(--primary); }
+        form button { background: var(--primary); color: white; border: none; padding: 14px; border-radius: 4px; font-weight: bold; cursor: pointer; transition: background 0.3s; }
+        form button:hover { background: #1a335a; }
+
+        /* Footer */
+        footer { background: var(--primary); color: #a0aec0; padding: 40px 20px; text-align: center; font-size: 0.9rem; border-top: 3px solid var(--secondary); }
+        footer p { max-width: 1100px; margin: 0 auto; }
+        
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; text-align: center; }
+            .logo { margin-bottom: 15px; }
+            nav a { margin: 0 10px; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">Northwest <span>Judgment Enforcement</span></div>
+            <nav>
+                <a href="#about">Our Firm</a>
+                <a href="#blog">Legal Insights</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero / Introduction -->
+    <div class="hero">
+        <h1>Professional Judgment Enforcement & Asset Recovery</h1>
+        <p>Providing compliant, sophisticated, and legal solutions to finalize outstanding judicial judgments across the Pacific Northwest.</p>
+        <a href="#contact" class="btn">Request a Consultation</a>
+    </div>
+
+    <!-- Firm Overview Section -->
+    <section id="about">
+        <h2 class="section-title">About Our Practice</h2>
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>Legal Excellence</h3>
+                <p>We approach judgment enforcement with the precision and professionalism expected of a premier law firm. Every asset search and legal remedy is executed in strict adherence to federal and state compliance laws.</p>
+            </div>
+            <div class="about-card">
+                <h3>Corporate Asset Recovery</h3>
+                <p>We specialize in navigating complex financial layers to locate concealed corporate assets, real estate holdings, and liquid funds required to satisfy your court-ordered judgments.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog / Legal Insights Section -->
+    <section id="blog" style="background-color: var(--bg-light);">
+        <h2 class="section-title">Legal Insights & Articles</h2>
+        <div class="blog-grid">
+            <div class="blog-post">
+                <div class="blog-content">
+                    <div class="blog-date">June 20, 2026</div>
+                    <h3>Understanding Asset Shielding in the Northwest</h3>
+                    <p>An overview of the legal frameworks debtors utilize to hide assets, and the legal toolsets available to pierce those protections.</p>
+                    <a href="#" class="blog-link">Read Article →</a>
+                </div>
+            </div>
+            <div class="blog-post">
+                <div class="blog-content">
+                    <div class="blog-date">May 14, 2026</div>
+                    <h3>The Lifespan of a Judicial Judgment</h3>
+                    <p>How long do you have to enforce a judgment, and what steps must your firm take to properly renew it before expiration?</p>
+                    <a href="#" class="blog-link">Read Article →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Confidential Case Evaluation</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Connect With Us</h3>
+                <p>Submit your verified judgment details via our secure intake channel. A specialized case representative will review the documentation to evaluate recovery viability.</p>
+                <p><strong>Office Hours:</strong> Mon - Fri, 9:00 AM - 5:00 PM PST</p>
+            </div>
+            <div>
+                <!-- Formspree.io integration recommended for static GitHub pages form handling -->
+                <form action="https://formspree.io" method="POST">
+                    <input type="text" name="name" placeholder="Your Name / Firm Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <input type="text" name="judgment_amount" placeholder="Judgment Amount ($)" required>
+                    <textarea name="message" rows="5" placeholder="Briefly describe your case requirements..." required></textarea>
+                    <button type="submit">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Northwest Judgment Enforcement. All rights reserved. <br>
+        <span style="font-size: 0.8rem; display:block; margin-top:10px; color:#718096;">Disclaimer: Submission of an inquiry does not constitute an attorney-client relationship. Northwest Judgment Enforcement operates as a professional legal judgment recovery firm.</span></p>
+    </footer>
+
+</body>
+</html>
