@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Northwest Judgment Enforcement</title>
     <style>
         :root {
@@ -46,30 +45,42 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 20px;
         }
 
         .logo-container {
             display: flex;
             align-items: center;
             text-decoration: none;
+            gap: 12px;
+            min-width: 0;
         }
 
         .logo-img {
-            height: 65px;
+            height: 52px;
             width: auto;
+            max-width: 120px;
             object-fit: contain;
-            margin-right: 15px;
+            display: block;
+            flex-shrink: 0;
         }
 
         .logo-text {
             color: var(--text-light);
-            font-size: 1.4rem;
+            font-size: 1.25rem;
             font-weight: bold;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
+            line-height: 1.1;
+            white-space: nowrap;
         }
 
         .logo-text span {
             color: var(--secondary);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
         }
 
         nav a {
@@ -80,7 +91,9 @@
             transition: color 0.3s;
         }
 
-        nav a:hover { color: var(--secondary); }
+        nav a:hover {
+            color: var(--secondary);
+        }
 
         .page-wrap {
             padding: 170px 20px 80px 20px;
@@ -144,83 +157,56 @@
             width: 100%;
         }
 
-        .contact-highlight strong {
-            color: var(--primary);
-            display: inline-block;
-            width: 70px;
-        }
-
-        .contact-highlight a {
-            color: var(--text-dark);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .contact-highlight a:hover {
-            color: var(--secondary);
-            text-decoration: underline;
-        }
-
-        .form-box {
-            background: #ffffff;
-            padding: 30px;
+        .contact-form {
+            background: var(--bg-light);
+            padding: 35px;
             border-radius: var(--roundness);
             box-shadow: 0 10px 30px rgba(0,0,0,0.04);
         }
 
-        .form-box form {
-            display: flex;
-            flex-direction: column;
+        .form-group {
+            margin-bottom: 18px;
         }
 
-        .form-box label {
+        .form-group label {
+            display: block;
             margin-bottom: 8px;
             font-weight: 600;
             color: var(--primary);
         }
 
-        .form-box input,
-        .form-box textarea {
-            padding: 14px;
-            margin-bottom: 18px;
-            border: 1px solid #cbd5e0;
-            border-radius: var(--roundness);
-            font-size: 1rem;
-            transition: border-color 0.3s, box-shadow 0.3s;
-            background-color: #ffffff;
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
             width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #cbd5e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            background: #fff;
             color: var(--text-dark);
         }
 
-        .form-box input:focus,
-        .form-box textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(15, 30, 86, 0.1);
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
         }
 
-        .form-box button {
-            background: var(--primary);
-            color: white;
+        .submit-btn {
+            background: var(--secondary);
+            color: var(--text-light);
+            padding: 14px 30px;
             border: none;
-            padding: 16px;
             border-radius: var(--roundness);
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s, transform 0.2s;
-            width: 100%;
+            font-weight: 700;
             font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.25s, transform 0.15s;
         }
 
-        .form-box button:hover {
-            background: #1a335a;
+        .submit-btn:hover {
+            background: #735f43;
             transform: translateY(-1px);
-        }
-
-        .help-text {
-            margin-top: 14px;
-            font-size: 0.95rem;
-            color: #718096;
         }
 
         footer {
@@ -233,6 +219,11 @@
             line-height: 1.8;
             width: 100%;
             clear: both;
+        }
+
+        footer p {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         footer a {
@@ -256,11 +247,17 @@
             }
 
             .logo-img {
-                height: 55px;
+                height: 44px;
+                max-width: 105px;
+            }
+
+            .logo-text {
+                font-size: 1.1rem;
+                white-space: normal;
+                text-align: center;
             }
 
             nav {
-                display: flex;
                 flex-direction: column;
             }
 
@@ -269,12 +266,12 @@
             }
 
             .page-wrap {
-                padding-top: 240px;
+                padding-top: 250px;
             }
 
             .contact-container {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 28px;
             }
         }
     </style>
@@ -283,13 +280,14 @@
 
     <header>
         <div class="nav-container">
-            <a href="index.html" class="logo-container">
-                <img src="logo.png" alt="Logo" class="logo-img" onerror="this.style.display='none'">
+            <a href="index.html" class="logo-container" aria-label="Northwest Judgment Enforcement home">
+                <img src="logo.png" alt="Northwest Judgment Enforcement logo" class="logo-img" onerror="this.style.display='none'">
                 <div class="logo-text">Northwest <span>Judgment Enforcement</span></div>
             </a>
-            <nav>
+            <nav aria-label="Main navigation">
                 <a href="index.html#about">What We Do</a>
                 <a href="index.html#tools">How We Collect</a>
+                <a href="judgment-creditor-education.html">Judgment Creditor Education</a>
                 <a href="contact.html">Contact</a>
             </nav>
         </div>
@@ -299,47 +297,74 @@
         <h1 class="section-title">Contact Us</h1>
 
         <div class="contact-container">
-            <div class="form-box">
-                <form action="thank-you.html" method="get">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
+            <div class="contact-card">
+                <h3>Get in Touch</h3>
+                <p>If you won a judgment and want help collecting, send us your information and we will reach out to discuss your options.</p>
 
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="contact-highlight">
+                    <strong>Phone:</strong> 509-xxx-xxxx
+                </div>
 
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required>
+                <div class="contact-highlight">
+                    <strong>Email:</strong> yourname@example.com
+                </div>
 
-                    <label for="message">Tell Us About Your Case</label>
-                    <textarea id="message" name="message" rows="6" required></textarea>
+                <div class="contact-highlight">
+                    <strong>Service Area:</strong> Serving Washington, Idaho, and Oregon
+                </div>
 
-                    <button type="submit">Send Message</button>
-                </form>
-
-                <p class="help-text">After you submit, you’ll be taken to a thank you page.</p>
+                <div class="contact-highlight">
+                    <strong>Appointments:</strong> In-person appointments available by request
+                </div>
             </div>
 
-            <div class="contact-card">
-                <h3>Company Contact Information</h3>
-                <p>Reach out directly using the information below.</p>
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
 
-                <div class="contact-highlight">
-                    <strong>Phone:</strong> <a href="tel:5098026893">(509) 802-6893</a>
-                </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                    </div>
 
-                <div class="contact-highlight">
-                    <strong>Email:</strong> <a href="mailto:info@northwestjudgmentenforcement.com">info@northwestjudgmentenforcement.com</a>
-                </div>
+                    <div class="form-group">
+                        <label for="location-of-judgment">Location of Judgment</label>
+                        <select id="location-of-judgment" name="location-of-judgment" required>
+                            <option value="" selected disabled>Select a location</option>
+                            <option value="Seattle WA">Seattle WA</option>
+                            <option value="Vancouver WA">Vancouver WA</option>
+                            <option value="Portland OR">Portland OR</option>
+                            <option value="Spokane WA">Spokane WA</option>
+                            <option value="Yakima WA">Yakima WA</option>
+                            <option value="Boise ID">Boise ID</option>
+                            <option value="CDA ID">CDA ID</option>
+                            <option value="Post Falls ID">Post Falls ID</option>
+                            <option value="Hermiston OR">Hermiston OR</option>
+                            <option value="Bend OR">Bend OR</option>
+                        </select>
+                    </div>
 
-                <div class="contact-highlight">
-                    <strong>Area:</strong> Washington State
-                </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your judgment" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Northwest Judgment Enforcement. All rights reserved. <a href="index.html">Home</a></p>
+        <p>&copy; 2026 Northwest Judgment Enforcement. All rights reserved. <a href="contact.html">Contact</a></p>
     </footer>
 
 </body>
