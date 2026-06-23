@@ -148,37 +148,6 @@
             line-height:1.45;
         }
 
-        .photo-section{padding-top:20px;}
-
-        .photo-grid{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-            gap:25px;
-            margin-top:15px;
-        }
-
-        .photo-card{
-            background:#fff;
-            border-radius:var(--roundness);
-            overflow:hidden;
-            box-shadow:0 10px 30px rgba(0,0,0,0.06);
-        }
-
-        .photo-card img{
-            width:100%;
-            height:320px;
-            object-fit:cover;
-            display:block;
-        }
-
-        .photo-caption{
-            padding:12px 14px;
-            background:var(--bg-light);
-            color:var(--text-dark);
-            font-weight:600;
-            text-align:center;
-        }
-
         .articles-section{
             background:var(--bg-light);
             border-top:1px solid #e5e7eb;
@@ -238,32 +207,6 @@
             overflow:hidden;
         }
 
-        .tools-list{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-            gap:25px;
-            list-style:none;
-            margin-top:20px;
-            width:100%;
-        }
-
-        .tools-item{
-            background:var(--bg-light);
-            padding:22px;
-            border-radius:var(--roundness);
-            border-top:4px solid var(--primary);
-            font-weight:700;
-            color:var(--primary);
-            text-align:center;
-            box-shadow:0 6px 15px rgba(0,0,0,0.04);
-            min-height:95px;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-        }
-
-        .tools-item:hover{transform:translateY(-3px);transition:transform 0.18s;}
-
         footer{
             background:var(--primary);
             color:#a0aec0;
@@ -311,9 +254,6 @@
             .hero{
                 padding-top:300px;
             }
-            .photo-card img{
-                height:250px;
-            }
             .article-card img{
                 height:180px;
             }
@@ -330,7 +270,7 @@
             </a>
             <nav aria-label="Main navigation">
                 <a href="#about">What We Do</a>
-                <a href="#tools">How We Collect</a>
+                <a href="#tools">How We Help</a>
                 <a href="judgment-creditor-education.html">Judgment Creditor Education</a>
                 <a href="contact.html">Contact</a>
             </nav>
@@ -344,32 +284,75 @@
     </div>
 
     <section id="about" aria-labelledby="about-heading">
-        <h2 id="about-heading" class="section-title">What We Do</h2>
+        <h2 id="about-heading" class="section-title">What the Process Looks Like</h2>
 
         <div class="services-grid">
             <div class="service-card" role="article" aria-labelledby="s1">
-                <h3 id="s1">We handle all the paperwork</h3>
-                <p>We prepare and file the necessary documents, manage deadlines, and ensure every procedural step is handled correctly so your judgment remains enforceable.</p>
+                <h3 id="s1">Step 1: Consultation</h3>
+                <p>No two cases move the same way, which is why every client starts with a one-on-one consultation and a plan tailored to the details of the judgment.</p>
             </div>
 
             <div class="service-card" role="article" aria-labelledby="s2">
-                <h3 id="s2">We work directly with the courts</h3>
-                <p>We coordinate with court clerks and judicial staff, follow court procedures, and pursue enforcement actions on your behalf so you don’t have to navigate the system alone.</p>
+                <h3 id="s2">Step 2: Locate Assets and Income</h3>
+                <p>We identify where the debtor’s assets and income are held by reviewing county and state records and, when needed, using court proceedings to uncover more information.</p>
             </div>
 
             <div class="service-card" role="article" aria-labelledby="s3">
-                <h3 id="s3">We find and secure assets</h3>
-                <p>We locate assets the judgment debtor holds — including real estate, vehicles, intellectual property, business assets, and personal property — and identify options to seize or lien those assets to satisfy your judgment.</p>
+                <h3 id="s3">Step 3: Place Liens</h3>
+                <p>Once assets are identified, we place liens where available to create leverage and encourage payment through the legal process.</p>
+            </div>
+
+            <div class="service-card" role="article" aria-labelledby="s4">
+                <h3 id="s4">Step 4: Finalize Payment</h3>
+                <p>When the judgment is resolved, we help complete the process and record the satisfaction of judgment so the matter is fully closed.</p>
             </div>
         </div>
     </section>
 
-    <section class="photo-section" id="photos" aria-labelledby="photos-heading">
-        <h2 id="photos-heading" class="section-title">Focused on Results</h2>
-        <div class="photo-grid">
+    <section id="tools" class="tools-container" aria-labelledby="tools-heading">
+        <h2 id="tools-heading" class="section-title">How We Help</h2>
+        <p style="text-align:center;max-width:700px;margin:-20px auto 30px auto;color:var(--text-dark);">
+            We work through the court system on your behalf, using the enforcement tools available to press a judgment forward and help bring a lawful result to completion.
+        </p>
+
+        <div class="services-grid">
+            <div class="service-card" role="article" aria-labelledby="h1">
+                <h3 id="h1">Consultation and Strategy</h3>
+                <p>We begin by reviewing your judgment, understanding the debtor, and building a practical plan based on your situation.</p>
             </div>
-            <div class="photo-card">
-                <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/7b908a534ad45e5b468fcbd2581bc4aa66efcc78.jpg" alt="Signed legal document with a gavel">
+
+            <div class="service-card" role="article" aria-labelledby="h2">
+                <h3 id="h2">Court Representation</h3>
+                <p>We work through the court process, handle the enforcement steps, and move the matter forward with a clear focus on results.</p>
+            </div>
+
+            <div class="service-card" role="article" aria-labelledby="h3">
+                <h3 id="h3">Asset Pressure</h3>
+                <p>By using liens and other collection tools where appropriate, we create legal pressure that helps encourage payment.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" aria-labelledby="pricing-heading">
+        <h2 id="pricing-heading" class="section-title">How It Works</h2>
+        <p style="text-align:center;max-width:700px;margin:-20px auto 30px auto;color:var(--text-dark);">
+            We offer three different arrangements so clients can choose the approach that fits their needs and timeline.
+        </p>
+
+        <div class="services-grid">
+            <div class="service-card" role="article" aria-labelledby="p1">
+                <h3 id="p1">Standard</h3>
+                <p>Under the Standard arrangement, the judgment is split 70/30.</p>
+            </div>
+
+            <div class="service-card" role="article" aria-labelledby="p2">
+                <h3 id="p2">Expedited</h3>
+                <p>Under the Expedited arrangement, the judgment is split 50/50.</p>
+            </div>
+
+            <div class="service-card" role="article" aria-labelledby="p3">
+                <h3 id="p3">Instant</h3>
+                <p>Under the Instant arrangement, you receive a cash payout in one to two weeks.</p>
             </div>
         </div>
     </section>
@@ -403,78 +386,6 @@
             </a>
         </div>
     </section>
-
-<section id="about" aria-labelledby="about-heading">
-    <h2 id="about-heading" class="section-title">What the Process Looks Like</h2>
-
-    <div class="services-grid">
-        <div class="service-card" role="article" aria-labelledby="s1">
-            <h3 id="s1">Step 1: Consultation</h3>
-            <p>No two cases move the same way, which is why every client starts with a one-on-one consultation and a plan tailored to the details of the judgment.</p>
-        </div>
-
-        <div class="service-card" role="article" aria-labelledby="s2">
-            <h3 id="s2">Step 2: Locate Assets and Income</h3>
-            <p>We identify where the debtor’s assets and income are held by reviewing county and state records and, when needed, using court proceedings to uncover more information.</p>
-        </div>
-
-        <div class="service-card" role="article" aria-labelledby="s3">
-            <h3 id="s3">Step 3: Place Liens</h3>
-            <p>Once assets are identified, we place liens where available to create leverage and encourage payment through the legal process.</p>
-        </div>
-
-        <div class="service-card" role="article" aria-labelledby="s4">
-            <h3 id="s4">Step 4: Finalize Payment</h3>
-            <p>When the judgment is resolved, we help complete the process and record the satisfaction of judgment so the matter is fully closed.</p>
-        </div>
-    </div>
-</section>
-    <section id="tools" class="tools-container" aria-labelledby="tools-heading">
-    <h2 id="tools-heading" class="section-title">How We Help</h2>
-    <p style="text-align:center;max-width:700px;margin:-20px auto 30px auto;color:var(--text-dark);">
-        We work through the court system on your behalf, using the enforcement tools available to press a judgment forward and help bring a lawful result to completion.
-    </p>
-
-    <div class="services-grid">
-        <div class="service-card" role="article" aria-labelledby="h1">
-            <h3 id="h1">Consultation and Strategy</h3>
-            <p>We begin by reviewing your judgment, understanding the debtor, and building a practical plan based on your situation.</p>
-        </div>
-
-        <div class="service-card" role="article" aria-labelledby="h2">
-            <h3 id="h2">Court Representation</h3>
-            <p>We work through the court process, handle the enforcement steps, and move the matter forward with a clear focus on results.</p>
-        </div>
-
-        <div class="service-card" role="article" aria-labelledby="h3">
-            <h3 id="h3">Asset Pressure</h3>
-            <p>By using liens and other collection tools where appropriate, we create legal pressure that helps encourage payment.</p>
-        </div>
-    </div>
-</section>
-    <section id="pricing" aria-labelledby="pricing-heading">
-    <h2 id="pricing-heading" class="section-title">How It Works</h2>
-    <p style="text-align:center;max-width:700px;margin:-20px auto 30px auto;color:var(--text-dark);">
-        We offer three different arrangements so clients can choose the approach that fits their needs and timeline.
-    </p>
-
-    <div class="services-grid">
-        <div class="service-card" role="article" aria-labelledby="p1">
-            <h3 id="p1">Standard</h3>
-            <p>Under the Standard arrangement, the judgment is split 70/30.</p>
-        </div>
-
-        <div class="service-card" role="article" aria-labelledby="p2">
-            <h3 id="p2">Expedited</h3>
-            <p>Under the Expedited arrangement, the judgment is split 50/50.</p>
-        </div>
-
-        <div class="service-card" role="article" aria-labelledby="p3">
-            <h3 id="p3">Instant</h3>
-            <p>Under the Instant arrangement, you receive a cash payout in one to two weeks.</p>
-        </div>
-    </div>
-</section>
 
     <footer role="contentinfo">
         <p>&copy; 2026 Northwest Judgment Enforcement. All rights reserved.<br>Washington - Idaho - Oregon</p>
