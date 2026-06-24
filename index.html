@@ -133,13 +133,16 @@
             justify-content:center;
             padding:30px;
             background:
-                linear-gradient(rgba(15,30,54,0.62),rgba(15,30,54,0.62)),
-                linear-gradient(135deg, rgba(15,30,54,0.35), rgba(138,115,85,0.22)),
+                linear-gradient(rgba(15,30,54,0.74), rgba(15,30,54,0.74)),
+                linear-gradient(135deg, rgba(138,115,85,0.22), rgba(15,30,54,0.18)),
                 url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg/960px-Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg') no-repeat center center/cover;
-            filter:saturate(0.82) contrast(0.96) brightness(0.88);
+            background-position:center center;
+            filter:saturate(0.8) contrast(0.95) brightness(0.82);
         }
         .quote-overlay{
-            background:rgba(255,255,255,0.74);
+            position:relative;
+            z-index:1;
+            background:rgba(255,255,255,0.84);
             backdrop-filter:blur(2px);
             border-radius:18px;
             padding:30px 28px;
@@ -308,6 +311,10 @@
             .feature-strip{grid-template-columns:1fr;}
             .side-photo img{min-height:260px;}
             .stat-number{font-size:3.2rem;}
+            .quote-hero{
+                min-height:340px;
+                background-position:center 15%;
+            }
         }
     </style>
 </head>
