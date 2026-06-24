@@ -212,14 +212,6 @@
             color:var(--text-dark);
         }
 
-        .back-top{
-            display:inline-block;
-            margin-top:8px;
-            color:var(--secondary);
-            text-decoration:none;
-            font-weight:700;
-        }
-
         footer{
             background:var(--primary);
             color:#a0aec0;
@@ -372,6 +364,10 @@
 
     <script>
         function toggleArticle(id){
+            const panels = document.querySelectorAll('.article-panel');
+            panels.forEach(panel => {
+                if (panel.id !== id) panel.classList.remove('open');
+            });
             const panel = document.getElementById(id);
             panel.classList.toggle('open');
         }
