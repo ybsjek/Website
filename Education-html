@@ -11,11 +11,12 @@
             --text-dark:#2d3748;
             --text-light:#f7fafc;
             --bg-light:#f8f9fa;
-            --roundness:12px;
+            --bg-alt:#eef2f7;
+            --roundness:14px;
         }
         html{scroll-behavior:smooth;}
         *{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;}
-        body{color:var(--text-dark);line-height:1.65;background:#fff;}
+        body{color:var(--text-dark);line-height:1.6;background:#fff;}
 
         header{
             background:var(--primary);
@@ -64,45 +65,37 @@
 
         .logo-text span{color:var(--secondary);}
 
-        nav{display:flex;align-items:center;}
-        nav a{
+        nav.top-nav{
+            display:flex;
+            align-items:center;
+            gap:18px;
+            flex-wrap:nowrap;
+            justify-content:flex-end;
+        }
+
+        nav.top-nav a{
             color:var(--text-light);
             text-decoration:none;
-            margin-left:25px;
             font-size:0.95rem;
             transition:color 0.25s;
+            white-space:nowrap;
+            margin-left:0;
         }
-        nav a:hover{color:var(--secondary);}
+        nav.top-nav a:hover{color:var(--secondary);}
 
         .hero{
-            background:linear-gradient(rgba(15,30,54,0.95),rgba(15,30,54,0.85)),url('https://unsplash.com') no-repeat center center/cover;
-            padding:220px 20px 130px;
+            background:
+                linear-gradient(rgba(15,30,54,0.92),rgba(15,30,54,0.80)),
+                url('https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            padding:220px 20px 120px 20px;
             color:var(--text-light);
             text-align:center;
         }
-
         .hero h1{font-size:2.8rem;margin-bottom:18px;font-weight:600;}
-        .hero p{
-            font-size:1.15rem;
-            max-width:850px;
-            margin:0 auto 30px;
-            color:#cbd5e0;
-        }
-
-        .btn{
-            background:var(--secondary);
-            color:var(--text-light);
-            padding:14px 34px;
-            text-decoration:none;
-            border-radius:var(--roundness);
-            font-weight:700;
-            display:inline-block;
-            transition:background 0.25s,transform 0.15s;
-        }
-        .btn:hover{background:#735f43;transform:translateY(-1px);}
+        .hero p{font-size:1.15rem;max-width:780px;margin:0 auto;color:#cbd5e0;}
 
         section{
-            padding:86px 20px;
+            padding:80px 20px;
             max-width:1200px;
             margin:0 auto;
             scroll-margin-top:110px;
@@ -110,130 +103,75 @@
 
         .section-title{
             text-align:center;
-            margin-bottom:28px;
+            margin-bottom:18px;
             position:relative;
             padding-bottom:15px;
             font-size:2rem;
             color:var(--primary);
         }
-
         .section-title::after{
             content:'';
             position:absolute;
             bottom:0;
             left:50%;
             transform:translateX(-50%);
-            width:54px;
+            width:50px;
             height:3px;
             background:var(--secondary);
             border-radius:2px;
         }
 
-        .intro-box,
-        .closing-box{
+        .intro-box{
+            max-width:900px;
+            margin:0 auto 30px auto;
             background:var(--bg-light);
             border-left:5px solid var(--secondary);
+            padding:28px;
             border-radius:var(--roundness);
-            padding:28px 30px;
             box-shadow:0 8px 24px rgba(0,0,0,0.04);
-            max-width:980px;
-            margin:0 auto;
-        }
-
-        .intro-box p,
-        .closing-box p{
-            margin-bottom:14px;
-        }
-
-        .step-grid{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-            gap:22px;
-            margin-top:24px;
-        }
-
-        .step-card{
-            background:#fff;
-            border-radius:var(--roundness);
-            box-shadow:0 10px 30px rgba(0,0,0,0.05);
-            padding:26px;
-            border-top:4px solid var(--primary);
-        }
-
-        .step-number{
-            display:inline-flex;
-            width:36px;
-            height:36px;
-            align-items:center;
-            justify-content:center;
-            border-radius:50%;
-            background:rgba(138,115,85,0.12);
-            color:var(--primary);
-            font-weight:700;
-            margin-bottom:14px;
-        }
-
-        .step-card h3{
-            color:var(--primary);
-            margin-bottom:12px;
-            font-size:1.15rem;
-        }
-
-        .step-card p{
-            margin-bottom:10px;
-        }
-
-        .asset-grid{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-            gap:16px;
-            margin-top:22px;
-        }
-
-        .asset-item{
-            background:#fff;
-            border-radius:var(--roundness);
-            padding:16px 18px;
-            border-left:4px solid var(--secondary);
-            box-shadow:0 6px 18px rgba(0,0,0,0.04);
-            font-weight:600;
-            color:var(--primary);
             text-align:center;
         }
 
-        .hub-grid{
+        .articles-grid{
             display:grid;
             grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
             gap:24px;
             margin-top:24px;
         }
 
-        .hub-card{
+        .article-wrap{
+            display:grid;
+            gap:12px;
+        }
+
+        .article-card{
             background:#fff;
             border-radius:var(--roundness);
             box-shadow:0 10px 30px rgba(0,0,0,0.05);
             overflow:hidden;
-            border-top:4px solid var(--secondary);
+            border-top:4px solid var(--primary);
             display:flex;
             flex-direction:column;
+            width:100%;
+            cursor:pointer;
+            text-align:left;
         }
 
-        .hub-card img{
+        .article-card img{
             width:100%;
             height:190px;
             object-fit:cover;
             display:block;
         }
 
-        .hub-card-content{
+        .article-content{
             padding:22px;
             display:flex;
             flex-direction:column;
-            gap:10px;
-            flex:1;
+            gap:12px;
         }
 
-        .hub-tag{
+        .article-tag{
             display:inline-block;
             color:var(--secondary);
             font-weight:700;
@@ -242,70 +180,36 @@
             letter-spacing:0.05em;
         }
 
-        .hub-card-content h3{
+        .article-content h3{
             color:var(--primary);
             font-size:1.2rem;
             line-height:1.35;
         }
 
-        .hub-card-content p{
-            color:var(--text-dark);
-        }
-
-        .hub-link{
-            margin-top:auto;
-            display:inline-block;
-            color:var(--primary);
-            font-weight:700;
-            text-decoration:none;
-        }
-
-        .hub-link:hover{
-            color:var(--secondary);
-            text-decoration:underline;
-        }
-
-        .video-list{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-            gap:24px;
-            margin-top:24px;
-        }
-
-        .video-card{
-            background:#fff;
-            border-radius:var(--roundness);
-            box-shadow:0 10px 30px rgba(0,0,0,0.05);
+        .article-panel{
+            max-height:0;
             overflow:hidden;
-            border-top:4px solid var(--primary);
+            transition:max-height 0.35s ease, padding 0.35s ease;
+            background:var(--bg-light);
+            border-left:5px solid var(--secondary);
+            border-radius:var(--roundness);
+            box-shadow:0 8px 24px rgba(0,0,0,0.04);
+            padding:0 22px;
         }
 
-        .video-wrap{
-            position:relative;
-            width:100%;
-            aspect-ratio:16/9;
-            background:#000;
+        .article-panel.open{
+            max-height:900px;
+            padding:22px;
         }
 
-        .video-wrap iframe{
-            position:absolute;
-            inset:0;
-            width:100%;
-            height:100%;
-            border:0;
-        }
-
-        .video-content{
-            padding:20px 22px 24px;
-        }
-
-        .video-content h3{
+        .article-panel h4{
             color:var(--primary);
-            margin-bottom:10px;
-            font-size:1.15rem;
+            margin:14px 0 10px;
+            font-size:1.05rem;
         }
 
-        .video-content p{
+        .article-panel p{
+            margin-bottom:14px;
             color:var(--text-dark);
         }
 
@@ -320,14 +224,11 @@
             width:100%;
             clear:both;
         }
-
-        footer a{
-            color:#cbd5e0;
-            text-decoration:none;
-        }
-
-        footer a:hover{
-            color:var(--secondary);
+        .footer-verse{
+            color:#e2e8f0;
+            font-style:italic;
+            margin-bottom:14px;
+            font-size:1rem;
         }
 
         @media(max-width:992px){
@@ -347,17 +248,16 @@
                 white-space:normal;
                 text-align:center;
             }
-            nav{
-                flex-direction:column;
-            }
-            nav a{
-                margin:8px 0;
+            nav.top-nav{
+                justify-content:center;
+                flex-wrap:wrap;
+                gap:12px 18px;
             }
             .hero{
                 padding-top:300px;
             }
-            .hero h1{
-                font-size:2.2rem;
+            .article-card img{
+                height:180px;
             }
         }
     </style>
@@ -370,172 +270,109 @@
                 <img src="logo.png" alt="Northwest Judgment Enforcement logo" class="logo-img" onerror="this.style.display='none'">
                 <div class="logo-text">Northwest <span>Judgment Enforcement</span></div>
             </a>
-            <nav aria-label="Main navigation">
-                <a href="index.html#about">What We Do</a>
-                <a href="index.html#tools">How We Collect</a>
-                <a href="#education">Education</a>
-                <a href="contact.html">Contact</a>
+            <nav aria-label="Main navigation" class="top-nav">
+                <a href="index.html#top">Home</a>
+                <a href="judgment-creditor-education.html">Judgment Creditor Education</a>
+                <a href="contact.html#top">Contact</a>
             </nav>
         </div>
     </header>
 
-    <main>
-        <div class="hero">
-            <h1>Judgment Creditor Education</h1>
+    <div class="hero" id="top" role="region" aria-label="Education introduction">
+        <h1>Judgment Creditor Education</h1>
+        <p>Learn about common enforcement tools and what they can mean for collecting on a court judgment.</p>
+    </div>
+
+    <section aria-labelledby="education-heading">
+        <h2 id="education-heading" class="section-title">Articles</h2>
+
+        <div class="intro-box">
             <p>
-                Congratulations on winning your lawsuit. You worked hard for that result, and it deserves to be celebrated.
-                This page explains how judgment collection works, what a judgment creditor and judgment debtor are, and how
-                our company helps guide people through the process.
+                This page is designed to help judgment creditors understand the tools often used after a judgment is entered.
+                Click any article card below to expand the full explanation right on this page.
             </p>
-            <a href="contact.html" class="btn">Talk With Us About Your Judgment</a>
         </div>
 
-        <section id="education">
-            <h2 class="section-title">How The Process Works</h2>
-            <div class="intro-box">
-                <p>
-                    A judgment is powerful because the court has officially ruled that one person owes another money.
-                    The person who won is called the <strong>judgment creditor</strong>, and the person who lost is called the
-                    <strong>judgment debtor</strong>.
-                </p>
-                <p>
-                    That distinction matters because it means the debt is now backed by the court, and the law gives the judgment
-                    creditor many ways to discover assets, income, and property that may be used to satisfy the judgment.
-                </p>
-                <p>
-                    No two judgment debtors are the same. Some have wages, some have bank accounts, and some have vehicles,
-                    real estate, or business assets. That is why every collection effort has to be built around the facts of the case.
-                </p>
-            </div>
+        <div class="articles-grid">
 
-            <div class="step-grid">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <h3>Understand the judgment</h3>
-                    <p>The first step is to understand what the court awarded, who owes the money, and what time limits or enforcement tools may apply.</p>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <h3>Identify assets and income</h3>
-                    <p>The court allows discovery tools that can help reveal income, property, and other assets tied to the judgment debtor.</p>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <h3>Choose the right collection method</h3>
-                    <p>Depending on the facts, collection may involve garnishment, liens, execution, sheriff sales, or other lawful methods.</p>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title">What Can Be Found</h2>
-            <div class="intro-box">
-                <p>
-                    Our role is to help identify what the judgment debtor actually has. That may include valuable property,
-                    business interests, or assets that can be used to move the case forward.
-                </p>
-
-                <div class="asset-grid">
-                    <div class="asset-item">Real Estate</div>
-                    <div class="asset-item">Vehicles</div>
-                    <div class="asset-item">Intellectual Property</div>
-                    <div class="asset-item">Business Assets</div>
-                    <div class="asset-item">Personal Property</div>
-                    <div class="asset-item">Income and Wages</div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title">Articles</h2>
-            <p style="text-align:center;max-width:760px;margin:-20px auto 30px auto;color:var(--text-dark);">
-                Educational articles will live here. Use this area to teach visitors about the process in plain language.
-            </p>
-
-            <div class="hub-grid">
-                <article class="hub-card">
-                    <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/908cb64b338e7b1c0237646b5a40f68e560ffcaf.jpg" alt="Legal documents and gavel">
-                    <div class="hub-card-content">
-                        <span class="hub-tag">Process</span>
-                        <h3>What Happens After You Win a Judgment?</h3>
-                        <p>Explain the first steps a judgment creditor should take after the court rules in their favor.</p>
-                        <a href="#" class="hub-link">Read article</a>
-                    </div>
-                </article>
-
-                <article class="hub-card">
-                    <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/fc2561d595e31df5414e609a4dc1613f2b3355b8.jpg" alt="Professional consultation">
-                    <div class="hub-card-content">
-                        <span class="hub-tag">Assets</span>
-                        <h3>How Asset Discovery Can Help Collect a Judgment</h3>
-                        <p>Walk visitors through how assets, income, and property may be uncovered during collection.</p>
-                        <a href="#" class="hub-link">Read article</a>
-                    </div>
-                </article>
-
-                <article class="hub-card">
-                    <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/7b908a534ad45e5b468fcbd2581bc4aa66efcc78.jpg" alt="Signed legal document">
-                    <div class="hub-card-content">
-                        <span class="hub-tag">Tools</span>
-                        <h3>Common Judgment Collection Tools Explained</h3>
-                        <p>Describe garnishment, liens, sheriff sales, debtor examinations, and other enforcement options.</p>
-                        <a href="#" class="hub-link">Read article</a>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title">Videos</h2>
-            <p style="text-align:center;max-width:760px;margin:-20px auto 30px auto;color:var(--text-dark);">
-                Videos will live here too. You can explain each part of the process visually and keep people engaged.
-            </p>
-
-            <div class="video-list">
-                <div class="video-card">
-                    <div class="video-wrap">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="How judgment collection works video" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-content">
-                        <h3>How Judgment Collection Works</h3>
-                        <p>A short overview video that explains the full process from judgment to collection.</p>
+            <div class="article-wrap">
+                <div class="article-card" onclick="toggleArticle('a1')">
+                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80" alt="Legal documents on a desk">
+                    <div class="article-content">
+                        <span class="article-tag">Education</span>
+                        <h3>What Is a Debtor’s Examination?</h3>
                     </div>
                 </div>
-
-                <div class="video-card">
-                    <div class="video-wrap">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Judgment collection tools video" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-content">
-                        <h3>Collection Tools Explained</h3>
-                        <p>A walkthrough of the legal tools that may be used depending on the debtor’s assets.</p>
-                    </div>
+                <div id="a1" class="article-panel">
+                    <h4>Overview</h4>
+                    <p>A debtor’s examination is a court process used to ask the judgment debtor questions under oath about assets, income, and property that could be used to satisfy a judgment.</p>
+                    <h4>Why It Matters</h4>
+                    <p>When a creditor does not know where the money or property is, this process can help uncover information that is not visible from public records alone.</p>
+                    <h4>What Happens</h4>
+                    <p>The debtor may be required to appear in court or before an authorized official and answer questions about bank accounts, employment, property ownership, and other financial details.</p>
+                    <h4>How It Helps Collection</h4>
+                    <p>The information gathered can support later enforcement steps such as liens, wage garnishment, or a writ of execution.</p>
                 </div>
             </div>
-        </section>
 
-        <section>
-            <h2 class="section-title">Why We Help</h2>
-            <div class="closing-box">
-                <p>
-                    My company exists to help each person in their journey of collection. We work alongside clients to keep the process organized, understandable, and focused on results.
-                </p>
-                <p>
-                    I believe in teaching people what is happening and why it matters. When a client understands the process, they are better prepared to make good decisions and move forward with confidence.
-                </p>
-                <p>
-                    That is the goal of this page: to educate, build trust, and show that judgment collection does not have to feel mysterious.
-                </p>
+            <div class="article-wrap">
+                <div class="article-card" onclick="toggleArticle('a2')">
+                    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80" alt="Courtroom and legal setting">
+                    <div class="article-content">
+                        <span class="article-tag">Education</span>
+                        <h3>What Is a Writ of Execution?</h3>
+                    </div>
+                </div>
+                <div id="a2" class="article-panel">
+                    <h4>Overview</h4>
+                    <p>A writ of execution is a court order that allows the enforcement of a judgment by directing a levying officer or sheriff to seize property that can be used to satisfy the debt.</p>
+                    <h4>Why It Matters</h4>
+                    <p>This tool can be useful when a debtor has property or assets that can be located and taken through the legal process.</p>
+                    <h4>What It Can Do</h4>
+                    <p>Depending on the law in the jurisdiction, a writ of execution may be used to seize non-exempt property, sell it, and apply the proceeds to the judgment balance.</p>
+                    <h4>When It Is Used</h4>
+                    <p>It is often used after other collection efforts have not produced payment, or when the creditor has information about specific assets.</p>
+                </div>
             </div>
-        </section>
-    </main>
 
-    <footer>
-        <p>2026 Northwest Judgment Enforcement. All rights reserved. <a href="contact.html">Contact</a></p>
-<br>Washington - Idaho - Oregon</p>    
-</footer>
+            <div class="article-wrap">
+                <div class="article-card" onclick="toggleArticle('a3')">
+                    <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80" alt="Professional office meeting">
+                    <div class="article-content">
+                        <span class="article-tag">Education</span>
+                        <h3>What Is Wage Garnishment?</h3>
+                    </div>
+                </div>
+                <div id="a3" class="article-panel">
+                    <h4>Overview</h4>
+                    <p>Wage garnishment is a legal process that allows a creditor to collect part of a debtor’s paycheck through an employer after a judgment has been entered.</p>
+                    <h4>Why It Matters</h4>
+                    <p>It can provide a steady path toward payment when the debtor has regular employment income.</p>
+                    <h4>How It Works</h4>
+                    <p>The court usually issues an order that requires the employer to withhold a portion of wages and send those funds toward the judgment.</p>
+                    <h4>Important Limits</h4>
+                    <p>There are usually legal limits on how much can be taken, and those limits can vary depending on the type of debt and the jurisdiction.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer role="contentinfo">
+        <p class="footer-verse">“For the Lord is righteous, he loves justice; the upright will see his face.” — Psalm 11:7</p>
+        <p>&copy; 2026 Northwest Judgment Enforcement. All rights reserved.<br>Washington - Idaho - Oregon</p>
+    </footer>
+
+    <script>
+        function toggleArticle(id){
+            const panels = document.querySelectorAll('.article-panel');
+            panels.forEach(panel => {
+                if (panel.id !== id) panel.classList.remove('open');
+            });
+            const panel = document.getElementById(id);
+            panel.classList.toggle('open');
+        }
+    </script>
 
 </body>
 </html>
