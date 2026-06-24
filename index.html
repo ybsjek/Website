@@ -11,7 +11,8 @@
             --text-dark:#2d3748;
             --text-light:#f7fafc;
             --bg-light:#f8f9fa;
-            --roundness:12px;
+            --bg-alt:#eef2f7;
+            --roundness:14px;
         }
         html{scroll-behavior:smooth;}
         *{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;}
@@ -64,7 +65,7 @@
 
         .logo-text span{color:var(--secondary);}
 
-        nav{display:flex;align-items:center;}
+        nav{display:flex;align-items:center;flex-wrap:wrap;justify-content:center;}
         nav a{
             color:var(--text-light);
             text-decoration:none;
@@ -75,7 +76,9 @@
         nav a:hover{color:var(--secondary);}
 
         .hero{
-            background:linear-gradient(rgba(15,30,54,0.95),rgba(15,30,54,0.85)),url('https://unsplash.com') no-repeat center center/cover;
+            background:
+                linear-gradient(rgba(15,30,54,0.92),rgba(15,30,54,0.80)),
+                url('https://images.unsplash.com/photo-1528747045269-390fe33c19c7?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
             padding:220px 20px 140px 20px;
             color:var(--text-light);
             text-align:center;
@@ -104,7 +107,7 @@
 
         .section-title{
             text-align:center;
-            margin-bottom:40px;
+            margin-bottom:35px;
             position:relative;
             padding-bottom:15px;
             font-size:2rem;
@@ -122,68 +125,192 @@
             border-radius:2px;
         }
 
+        .verse-section{
+            padding:50px 20px 10px 20px;
+            max-width:900px;
+            margin:0 auto;
+        }
+        .verse-box{
+            background:#f8f9fa;
+            border-left:5px solid var(--secondary);
+            border-radius:12px;
+            padding:26px 28px;
+            text-align:center;
+            box-shadow:0 6px 18px rgba(0,0,0,0.04);
+        }
+        .verse-text{
+            font-size:1.15rem;
+            color:var(--primary);
+            font-style:italic;
+            margin-bottom:10px;
+            line-height:1.7;
+        }
+        .verse-reference{
+            color:var(--secondary);
+            font-weight:700;
+            letter-spacing:0.04em;
+        }
+
+        .who-wrap{
+            display:grid;
+            grid-template-columns:1.2fr 0.8fr;
+            gap:28px;
+            align-items:stretch;
+        }
+        .content-wrap{
+            max-width:950px;
+            margin:0 auto;
+        }
+        .intro-box{
+            background:var(--bg-light);
+            border-left:5px solid var(--secondary);
+            border-radius:var(--roundness);
+            padding:30px;
+            box-shadow:0 8px 24px rgba(0,0,0,0.04);
+            margin-bottom:24px;
+        }
+        .intro-box p{
+            color:var(--text-dark);
+            font-size:1.05rem;
+        }
+        .side-photo{
+            border-radius:var(--roundness);
+            overflow:hidden;
+            box-shadow:0 10px 30px rgba(0,0,0,0.08);
+            min-height:100%;
+        }
+        .side-photo img{
+            width:100%;
+            height:100%;
+            min-height:320px;
+            object-fit:cover;
+            display:block;
+        }
+
+        .card-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:24px;
+            margin-top:20px;
+        }
+        .info-card{
+            background:#fff;
+            padding:28px;
+            border-radius:var(--roundness);
+            box-shadow:0 8px 24px rgba(0,0,0,0.04);
+            border-top:4px solid var(--secondary);
+        }
+        .info-card:nth-child(2){background:var(--bg-alt);}
+        .info-card:nth-child(3){background:#fff7ef;}
+        .info-card h3{
+            margin-bottom:12px;
+            color:var(--primary);
+            font-size:1.15rem;
+        }
+        .info-card p{
+            color:var(--text-dark);
+            line-height:1.55;
+        }
+
+        .process-section{
+            background:var(--bg-light);
+            border-radius:26px;
+        }
         .services-grid{
             display:grid;
             grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
             gap:24px;
             margin-top:20px;
         }
-
         .service-card{
-            background:var(--bg-light);
+            background:#fff;
             padding:28px;
             border-radius:var(--roundness);
             box-shadow:0 8px 24px rgba(0,0,0,0.04);
-            border-left:5px solid var(--secondary);
+            border-top:4px solid var(--secondary);
         }
-
+        .service-card:nth-child(2){background:#f8fbff;}
+        .service-card:nth-child(3){background:#fffaf5;}
+        .service-card:nth-child(4){background:#f7fafc;}
         .service-card h3{
             margin-bottom:12px;
             color:var(--primary);
             font-size:1.15rem;
         }
-
         .service-card p{
             color:var(--text-dark);
             line-height:1.45;
         }
 
+        .help-wrap{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:28px;
+            align-items:start;
+        }
+        .help-photo{
+            border-radius:var(--roundness);
+            overflow:hidden;
+            box-shadow:0 10px 30px rgba(0,0,0,0.08);
+        }
+        .help-photo img{
+            width:100%;
+            height:100%;
+            min-height:360px;
+            object-fit:cover;
+            display:block;
+        }
+        .help-cards{
+            display:grid;
+            gap:18px;
+        }
+        .help-item{
+            background:#fff;
+            border-left:5px solid var(--secondary);
+            border-radius:var(--roundness);
+            padding:24px;
+            box-shadow:0 8px 24px rgba(0,0,0,0.04);
+        }
+        .help-item h3{
+            margin-bottom:10px;
+            color:var(--primary);
+        }
+
+        .pricing-section{
+            background:linear-gradient(180deg,#ffffff 0%, #f8f9fa 100%);
+        }
         .pricing-row{
             display:grid;
             grid-template-columns:repeat(3,1fr);
             gap:20px;
             margin-top:10px;
         }
-
         .pricing-card{
             background:#fff;
             border:1px solid #e5e7eb;
             border-top:4px solid var(--primary);
-            border-radius:10px;
-            padding:22px;
+            border-radius:12px;
+            padding:24px;
             box-shadow:0 6px 18px rgba(0,0,0,0.04);
             transition:transform 0.2s ease, box-shadow 0.2s ease;
         }
-
         .pricing-card:hover{
             transform:translateY(-3px);
             box-shadow:0 10px 24px rgba(0,0,0,0.08);
         }
-
         .pricing-card h3{
             color:var(--primary);
             margin-bottom:10px;
             font-size:1.15rem;
         }
-
         .pricing-card p{
             margin:0;
             color:var(--text-dark);
             line-height:1.5;
         }
-
         .pricing-card.featured{
             border-top-color:var(--secondary);
+            transform:scale(1.02);
         }
 
         .articles-section{
@@ -191,14 +318,12 @@
             border-top:1px solid #e5e7eb;
             border-bottom:1px solid #e5e7eb;
         }
-
         .articles-grid{
             display:grid;
             grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
             gap:24px;
             margin-top:22px;
         }
-
         .article-card{
             background:#fff;
             border-radius:var(--roundness);
@@ -208,14 +333,12 @@
             display:flex;
             flex-direction:column;
         }
-
         .article-card img{
             width:100%;
             height:190px;
             object-fit:cover;
             display:block;
         }
-
         .article-content{
             padding:22px;
             display:flex;
@@ -223,7 +346,6 @@
             gap:12px;
             flex:1;
         }
-
         .article-tag{
             display:inline-block;
             color:var(--secondary);
@@ -232,17 +354,10 @@
             text-transform:uppercase;
             letter-spacing:0.05em;
         }
-
         .article-content h3{
             color:var(--primary);
             font-size:1.2rem;
             line-height:1.35;
-        }
-
-        .tools-container{
-            background:#fff;
-            padding:40px 0;
-            overflow:hidden;
         }
 
         footer{
@@ -257,47 +372,19 @@
             clear:both;
         }
 
-        footer a{
-            color:#cbd5e0;
-            text-decoration:none;
-        }
-
-        footer a:hover{
-            color:var(--secondary);
-        }
-
         @media(max-width:992px){
-            .nav-container{
-                flex-direction:column;
-                text-align:center;
-            }
-            .logo-container{
-                justify-content:center;
-            }
-            .logo-img{
-                height:44px;
-                max-width:105px;
-            }
-            .logo-text{
-                font-size:1.1rem;
-                white-space:normal;
-                text-align:center;
-            }
-            nav{
-                flex-direction:column;
-            }
-            nav a{
-                margin:8px 0;
-            }
-            .hero{
-                padding-top:300px;
-            }
-            .article-card img{
-                height:180px;
-            }
-            .pricing-row{
-                grid-template-columns:1fr;
-            }
+            .nav-container{flex-direction:column;text-align:center;}
+            .logo-container{justify-content:center;}
+            .logo-img{height:44px;max-width:105px;}
+            .logo-text{font-size:1.1rem;white-space:normal;text-align:center;}
+            nav{flex-direction:column;}
+            nav a{margin:8px 0;}
+            .hero{padding-top:300px;}
+            .who-wrap,.help-wrap{grid-template-columns:1fr;}
+            .side-photo img,.help-photo img{min-height:260px;}
+            .article-card img{height:180px;}
+            .pricing-row{grid-template-columns:1fr;}
+            .pricing-card.featured{transform:none;}
         }
     </style>
 </head>
@@ -310,6 +397,7 @@
                 <div class="logo-text">Northwest <span>Judgment Enforcement</span></div>
             </a>
             <nav aria-label="Main navigation">
+                <a href="#who-we-are">Who We Are</a>
                 <a href="#about">What We Do</a>
                 <a href="#tools">How We Help</a>
                 <a href="#pricing">How It Works</a>
@@ -325,57 +413,105 @@
         <a href="contact.html" class="btn">Get Help Collecting Your Money</a>
     </div>
 
-    <section id="about" aria-labelledby="about-heading">
+    <section class="verse-section" aria-labelledby="verse-heading">
+        <div class="verse-box">
+            <p id="verse-heading" class="verse-text">“For the Lord is a God of justice; blessed are all those who wait for Him.”</p>
+            <p class="verse-reference">Isaiah 30:18</p>
+        </div>
+    </section>
+
+    <section id="who-we-are" aria-labelledby="who-we-are-heading">
+        <h2 id="who-we-are-heading" class="section-title">Who We Are</h2>
+
+        <div class="who-wrap">
+            <div>
+                <div class="intro-box">
+                    <p>
+                        Northwest Judgment Enforcement was built to help people and businesses collect on judgments that have gone unpaid. We understand that winning a case is only the first step. What comes next can be frustrating, time-consuming, and confusing, which is why we focus on making the enforcement process more organized and effective.
+                    </p>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <h3>Our Mission</h3>
+                        <p>Our mission is to help judgment creditors pursue lawful collection with a clear process, consistent communication, and a strategy built around the facts of each case.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Our Approach</h3>
+                        <p>We do not believe in one-size-fits-all enforcement. Every case is different, so we start by reviewing the judgment, identifying the debtor’s assets and income, and determining the best path forward.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>What Sets Us Apart</h3>
+                        <p>We focus on persistence, practical strategy, and client service. Our goal is to guide each matter with care while using the tools available to move it toward resolution.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="side-photo">
+                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80" alt="Office desk with legal documents and a laptop">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="process-section" aria-labelledby="about-heading">
         <h2 id="about-heading" class="section-title">What the Process Looks Like</h2>
 
         <div class="services-grid">
             <div class="service-card" role="article" aria-labelledby="s1">
                 <h3 id="s1">Step 1: Consultation</h3>
-                <p>Personalized consultation. We build a specific plan based on your previous legal action and unique situation.</p>
+                <p>No two cases move the same way, which is why every client starts with a one-on-one consultation and a plan tailored to the details of the judgment.</p>
             </div>
 
             <div class="service-card" role="article" aria-labelledby="s2">
                 <h3 id="s2">Step 2: Locate Assets and Income</h3>
-                <p>Identify debtor’s assets and income by reviewing government records, subpoenas, and supplemental proceedings.</p>
+                <p>We identify where the debtor’s assets and income are held by reviewing county and state records and, when needed, using court proceedings to uncover more information.</p>
             </div>
 
             <div class="service-card" role="article" aria-labelledby="s3">
-                <h3 id="s3">Step 3: Place Liens and Force Sale of Assets</h3>
-                <p>Place liens on Debtor's assets and garnish wages. Eligible debtor's assets are seized and sold. leverage and encourage payment through the legal process.</p>
+                <h3 id="s3">Step 3: Place Liens</h3>
+                <p>Once assets are identified, we place liens where available to create leverage and encourage payment through the legal process.</p>
             </div>
 
             <div class="service-card" role="article" aria-labelledby="s4">
                 <h3 id="s4">Step 4: Finalize Payment</h3>
-                <p>Secure payments are made to our client until the case is resolved.</p>
+                <p>When the judgment is resolved, we help complete the process and record the satisfaction of judgment so the matter is fully closed.</p>
             </div>
         </div>
     </section>
 
-    <section id="tools" class="tools-container" aria-labelledby="tools-heading">
+    <section id="tools" aria-labelledby="tools-heading">
         <h2 id="tools-heading" class="section-title">How We Help</h2>
         <p style="text-align:center;max-width:700px;margin:-20px auto 30px auto;color:var(--text-dark);">
             We work through the court system on your behalf, using the enforcement tools available to press a judgment forward and help bring a lawful result to completion.
         </p>
 
-        <div class="services-grid">
-            <div class="service-card" role="article" aria-labelledby="h1">
-                <h3 id="h1">Consultation and Strategy</h3>
-                <p>We begin by reviewing your judgment, understanding the debtor, and building a practical plan based on your situation.</p>
+        <div class="help-wrap">
+            <div class="help-photo">
+                <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80" alt="Legal professionals in a meeting">
             </div>
 
-            <div class="service-card" role="article" aria-labelledby="h2">
-                <h3 id="h2">Court Representation</h3>
-                <p>We work through the court process, handle the enforcement steps, and move the matter forward with a clear focus on results.</p>
-            </div>
+            <div class="help-cards">
+                <div class="help-item">
+                    <h3>Consultation and Strategy</h3>
+                    <p>We begin by reviewing your judgment, understanding the debtor, and building a practical plan based on your situation.</p>
+                </div>
 
-            <div class="service-card" role="article" aria-labelledby="h3">
-                <h3 id="h3">Asset Pressure</h3>
-                <p>By using liens and other collection tools where appropriate, we create legal pressure that helps encourage payment.</p>
+                <div class="help-item">
+                    <h3>Court Representation</h3>
+                    <p>We work through the court process, handle the enforcement steps, and move the matter forward with a clear focus on results.</p>
+                </div>
+
+                <div class="help-item">
+                    <h3>Asset Pressure</h3>
+                    <p>By using liens and other collection tools where appropriate, we create legal pressure that helps encourage payment.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="pricing" aria-labelledby="pricing-heading">
+    <section id="pricing" class="pricing-section" aria-labelledby="pricing-heading">
         <h2 id="pricing-heading" class="section-title">How It Works</h2>
         <p style="text-align:center;max-width:850px;margin:-20px auto 30px auto;color:var(--text-dark);">
             Judgment enforcement is not always a quick process and we are here to serve you for as long as it takes. However, some people seek faster resolution. To accommodate the needs of our customers, we have the following options.
@@ -389,7 +525,7 @@
 
             <div class="pricing-card featured">
                 <h3>Expedited</h3>
-                <p>50/50 split and customer is paid first.</p>
+                <p>Collections are split 50/50, but the customer is paid first.</p>
             </div>
 
             <div class="pricing-card">
