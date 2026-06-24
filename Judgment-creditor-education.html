@@ -34,52 +34,27 @@
             color:var(--text-light);
             text-align:center;
         }
-        .hero h1{font-size:2.8rem;margin-bottom:18px;font-weight:600;}
+        .hero h1{font-size:2.8rem;margin-bottom:12px;font-weight:600;}
+        .hero p{font-size:1.15rem;max-width:760px;margin:0 auto;color:#cbd5e0;}
         section{padding:80px 20px;max-width:1200px;margin:0 auto;scroll-margin-top:110px;}
         .section-title{text-align:center;margin-bottom:18px;position:relative;padding-bottom:15px;font-size:2rem;color:var(--primary);}
         .section-title::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:50px;height:3px;background:var(--secondary);border-radius:2px;}
         .intro-box{max-width:900px;margin:0 auto 30px auto;background:var(--bg-light);border-left:5px solid var(--secondary);padding:28px;border-radius:var(--roundness);box-shadow:0 8px 24px rgba(0,0,0,0.04);text-align:center;}
+        .intro-box p{color:var(--text-dark);font-size:1.05rem;}
         .articles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:24px;}
         .article-wrap{display:grid;gap:12px;}
-        .article-card{
-            background:#fff;
-            border-radius:var(--roundness);
-            box-shadow:0 10px 30px rgba(0,0,0,0.05);
-            overflow:hidden;
-            border-top:4px solid var(--primary);
-            display:flex;
-            flex-direction:column;
-            width:100%;
-            cursor:pointer;
-            text-align:left;
-        }
+        .article-card{background:#fff;border-radius:var(--roundness);box-shadow:0 10px 30px rgba(0,0,0,0.05);overflow:hidden;border-top:4px solid var(--primary);display:flex;flex-direction:column;width:100%;cursor:pointer;text-align:left;}
         .article-card img{width:100%;height:190px;object-fit:cover;display:block;}
         .article-content{padding:22px;display:flex;flex-direction:column;gap:12px;}
         .article-content h3{color:var(--primary);font-size:1.2rem;line-height:1.35;}
-        .article-panel{
-            max-height:0;
-            overflow:hidden;
-            transition:max-height 0.35s ease, padding 0.35s ease;
-            background:var(--bg-light);
-            border-left:5px solid var(--secondary);
-            border-radius:var(--roundness);
-            box-shadow:0 8px 24px rgba(0,0,0,0.04);
-            padding:0 22px;
-        }
+        .article-panel{max-height:0;overflow:hidden;transition:max-height 0.35s ease, padding 0.35s ease;background:var(--bg-light);border-left:5px solid var(--secondary);border-radius:var(--roundness);box-shadow:0 8px 24px rgba(0,0,0,0.04);padding:0 22px;}
         .article-panel.open{max-height:900px;padding:22px;}
         .article-panel h4{color:var(--primary);margin:14px 0 10px;font-size:1.05rem;}
         .article-panel p{margin-bottom:14px;color:var(--text-dark);}
         footer{background:var(--primary);color:#a0aec0;padding:50px 20px;text-align:center;font-size:0.95rem;border-top:3px solid var(--secondary);line-height:1.8;width:100%;clear:both;}
         .footer-verse{color:#e2e8f0;font-style:italic;margin-bottom:14px;font-size:1rem;}
-        .footer-phone{
-            color:#e2e8f0;
-            text-decoration:none;
-            transition:color 0.25s ease, text-decoration 0.25s ease;
-        }
-        .footer-phone:hover{
-            color:var(--secondary);
-            text-decoration:underline;
-        }
+        .footer-phone{color:#e2e8f0;text-decoration:none;transition:color 0.25s ease, text-decoration 0.25s ease;}
+        .footer-phone:hover{color:var(--secondary);text-decoration:underline;}
         @media(max-width:992px){
             .nav-container{flex-direction:column;text-align:center;}
             .logo-container{justify-content:center;}
@@ -107,19 +82,20 @@
 </header>
 
 <div class="hero" id="top">
-    <h1>Judgment Creditor Education</h1>
+    <h1>Education</h1>
+    <p>We want you to understand the process.</p>
 </div>
 
 <section>
-    <h2 class="section-title">Articles</h2>
+    <h2 class="section-title">Learning Resources</h2>
     <div class="intro-box">
-        <p>These are free educational materials to help customers better understand the enforcement process.</p>
+        <p>Our company wants everyone to succeed, and these free educational materials are here to help customers better understand the enforcement process.</p>
     </div>
 
     <div class="articles-grid">
         <div class="article-wrap">
             <div class="article-card" onclick="toggleArticle('a1')">
-                <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/19701804918f3ebec0fe7735c0a83f14b15649cb.jpg" alt="Person standing in a courtroom">
+                <img src="https://images.unsplash.com/photo-1564760055775-d63b17a55c44?auto=format&fit=crop&w=1200&q=80" alt="Person standing in a courtroom">
                 <div class="article-content">
                     <h3>What Is a Debtor’s Examination?</h3>
                 </div>
@@ -127,18 +103,12 @@
             <div id="a1" class="article-panel">
                 <h4>Overview</h4>
                 <p>A debtor’s examination is a court process used to ask the judgment debtor questions under oath about assets, income, and property that could be used to satisfy a judgment.</p>
-                <h4>Why It Matters</h4>
-                <p>When a creditor does not know where the money or property is, this process can help uncover information that is not visible from public records alone.</p>
-                <h4>What Happens</h4>
-                <p>The debtor may be required to appear in court or before an authorized official and answer questions about bank accounts, employment, property ownership, and other financial details.</p>
-                <h4>How It Helps Collection</h4>
-                <p>The information gathered can support later enforcement steps such as liens, wage garnishment, or a writ of execution.</p>
             </div>
         </div>
 
         <div class="article-wrap">
             <div class="article-card" onclick="toggleArticle('a2')">
-                <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/1e81760ba14c56d713b12f53ae346f0714036617.jpg" alt="U.S. Marshal in uniform">
+                <img src="https://images.unsplash.com/photo-1593113630400-ea4288922497?auto=format&fit=crop&w=1200&q=80" alt="Male sheriff in uniform">
                 <div class="article-content">
                     <h3>What Is a Writ of Execution?</h3>
                 </div>
@@ -146,18 +116,12 @@
             <div id="a2" class="article-panel">
                 <h4>Overview</h4>
                 <p>A writ of execution is a court order that allows the enforcement of a judgment by directing a levying officer or sheriff to seize property that can be used to satisfy the debt.</p>
-                <h4>Why It Matters</h4>
-                <p>This tool can be useful when a debtor has property or assets that can be located and taken through the legal process.</p>
-                <h4>What It Can Do</h4>
-                <p>Depending on the law in the jurisdiction, a writ of execution may be used to seize non-exempt property, sell it, and apply the proceeds to the judgment balance.</p>
-                <h4>When It Is Used</h4>
-                <p>It is often used after other collection efforts have not produced payment, or when the creditor has information about specific assets.</p>
             </div>
         </div>
 
         <div class="article-wrap">
             <div class="article-card" onclick="toggleArticle('a3')">
-                <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/26aff0fc62058d5d047c02be7c4c4698b4d25fd8.jpg" alt="Pay stub">
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80" alt="Sample pay stub">
                 <div class="article-content">
                     <h3>What Is Wage Garnishment?</h3>
                 </div>
@@ -165,69 +129,45 @@
             <div id="a3" class="article-panel">
                 <h4>Overview</h4>
                 <p>Wage garnishment is a legal process that allows a creditor to collect part of a debtor’s paycheck through an employer after a judgment has been entered.</p>
-                <h4>Why It Matters</h4>
-                <p>It can provide a steady path toward payment when the debtor has regular employment income.</p>
-                <h4>How It Works</h4>
-                <p>The court usually issues an order that requires the employer to withhold a portion of wages and send those funds toward the judgment.</p>
-                <h4>Important Limits</h4>
-                <p>There are usually legal limits on how much can be taken, and those limits can vary depending on the type of debt and the jurisdiction.</p>
             </div>
         </div>
 
         <div class="article-wrap">
             <div class="article-card" onclick="toggleArticle('a4')">
-                <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/734ee7502c52781307d1224ef5e027f2fc5881fa.jpg" alt="House for real estate property lien article">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80" alt="House for real estate property lien article">
                 <div class="article-content">
                     <h3>Property Liens</h3>
                 </div>
             </div>
             <div id="a4" class="article-panel">
                 <h4>Overview</h4>
-                <p>A property lien is a legal claim against real property that can help secure a judgment debt. In many cases, a judgment creditor may record the judgment so it attaches to property the debtor owns, which can make it harder to sell or refinance without addressing the debt first.</p>
-                <h4>Why It Matters</h4>
-                <p>Liens do not automatically put money in your hands, but they can create pressure and preserve leverage while other enforcement tools are considered.</p>
-                <h4>What It Can Do</h4>
-                <p>Depending on the state, a lien may affect a debtor’s ability to transfer property, refinance, or sell real estate without paying the judgment first.</p>
-                <h4>Practical Use</h4>
-                <p>For creditors, the practical value of a lien is that it can turn an unsecured judgment into a more secured position and improve your place in the collection process.</p>
+                <p>A property lien is a legal claim against real property that can help secure a judgment debt.</p>
             </div>
         </div>
 
         <div class="article-wrap">
             <div class="article-card" onclick="toggleArticle('a5')">
-                <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/855707d7e06447b61c526edc015162df0fbd0357.jpg" alt="Courthouse exterior for intellectual property turnover order article">
+                <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80" alt="Courthouse exterior for intellectual property turnover order article">
                 <div class="article-content">
                     <h3>Turnover Orders of Intellectual Property</h3>
                 </div>
             </div>
             <div id="a5" class="article-panel">
                 <h4>Overview</h4>
-                <p>A turnover order is a court order requiring a judgment debtor to surrender property or interests that can be used to satisfy a judgment. When the property is intellectual property, that may include copyright interests, trademarks, licensing rights, royalties, or other transferable intangible rights.</p>
-                <h4>Why It Matters</h4>
-                <p>These orders can be especially useful when a debtor has limited cash but owns valuable rights that still have market value.</p>
-                <h4>What To Look For</h4>
-                <p>Because intellectual property can be more complicated to identify and value than ordinary assets, the creditor usually needs clear records showing what the debtor owns and whether those rights can legally be transferred or collected.</p>
-                <h4>Practical Use</h4>
-                <p>Turnover remedies are often used when ordinary collection methods do not reach the asset. The court order should identify what must be turned over and how it will be enforced.</p>
+                <p>A turnover order is a court order requiring a judgment debtor to surrender property or interests that can be used to satisfy a judgment.</p>
             </div>
         </div>
 
         <div class="article-wrap">
             <div class="article-card" onclick="toggleArticle('a6')">
-                <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/6f16faad024d2e0bcdfee75fb413a04741f7dcbe.jpg" alt="Person handing over a document for subpoena article">
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80" alt="Two standing people exchanging documents">
                 <div class="article-content">
                     <h3>Subpoenas</h3>
                 </div>
             </div>
             <div id="a6" class="article-panel">
                 <h4>Overview</h4>
-                <p>A subpoena is a formal legal demand that can require a person or organization to produce records, appear for testimony, or both. In post-judgment collection, subpoenas are often used to gather information about income, assets, bank accounts, business interests, and other evidence that may help locate collectable property.</p>
-                <h4>Why It Matters</h4>
-                <p>Subpoenas are useful because they can force the disclosure of facts the debtor may not volunteer. They may also reach third parties such as employers, banks, accountants, or business partners who hold information relevant to enforcement.</p>
-                <h4>What It Can Do</h4>
-                <p>A subpoena can narrow the search for assets and support other enforcement actions like liens, garnishment, or turnover requests.</p>
-                <h4>Practical Use</h4>
-                <p>The scope and method of service matter, so the document must be prepared and served carefully to be effective.</p>
+                <p>A subpoena is a formal legal demand that can require a person or organization to produce records, appear for testimony, or both.</p>
             </div>
         </div>
     </div>
