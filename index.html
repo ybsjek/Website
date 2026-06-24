@@ -232,63 +232,6 @@
             font-size:1.15rem;
         }
         .service-card p{color:var(--text-dark);line-height:1.45;}
-        .help-wrap{
-            display:grid;
-            grid-template-columns:1fr 1fr;
-            gap:28px;
-            align-items:start;
-        }
-        .help-photo{
-            border-radius:var(--roundness);
-            overflow:hidden;
-            box-shadow:0 10px 30px rgba(0,0,0,0.08);
-        }
-        .help-photo img{
-            width:100%;
-            height:100%;
-            min-height:360px;
-            object-fit:cover;
-            display:block;
-        }
-        .help-cards{display:grid;gap:18px;}
-        .help-item{
-            background:#fff;
-            border-left:5px solid var(--secondary);
-            border-radius:var(--roundness);
-            padding:24px;
-            box-shadow:0 8px 24px rgba(0,0,0,0.04);
-        }
-        .help-item h3{margin-bottom:10px;color:var(--primary);}
-        .pricing-section{background:linear-gradient(180deg,#ffffff 0%, #f8f9fa 100%);}
-        .pricing-row{
-            display:grid;
-            grid-template-columns:repeat(3,1fr);
-            gap:20px;
-            margin-top:10px;
-        }
-        .pricing-card{
-            background:#fff;
-            border:1px solid #e5e7eb;
-            border-top:4px solid var(--primary);
-            border-radius:12px;
-            padding:24px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.04);
-            transition:transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .pricing-card:hover{
-            transform:translateY(-3px);
-            box-shadow:0 10px 24px rgba(0,0,0,0.08);
-        }
-        .pricing-card h3{
-            color:var(--primary);
-            margin-bottom:10px;
-            font-size:1.15rem;
-        }
-        .pricing-card p{margin:0;color:var(--text-dark);line-height:1.5;}
-        .pricing-card.featured{
-            border-top-color:var(--secondary);
-            transform:scale(1.02);
-        }
         .cta-band{
             background:var(--primary);
             color:var(--text-light);
@@ -314,6 +257,15 @@
             margin-bottom:14px;
             font-size:1rem;
         }
+        .footer-phone{
+            color:#e2e8f0;
+            text-decoration:none;
+            transition:color 0.25s ease, text-decoration 0.25s ease;
+        }
+        .footer-phone:hover{
+            color:var(--secondary);
+            text-decoration:underline;
+        }
         @media(max-width:992px){
             .nav-container{flex-direction:column;text-align:center;}
             .logo-container{justify-content:center;}
@@ -321,11 +273,10 @@
             .logo-text{font-size:1.1rem;white-space:normal;text-align:center;}
             nav.top-nav{justify-content:center;flex-wrap:wrap;gap:12px 18px;}
             .hero{padding-top:300px;}
-            .who-wrap,.help-wrap{grid-template-columns:1fr;}
-            .side-photo img,.help-photo img{min-height:260px;}
-            .pricing-row{grid-template-columns:1fr;}
-            .pricing-card.featured{transform:none;}
+            .who-wrap{grid-template-columns:1fr;}
+            .side-photo img{min-height:260px;}
             .stat-number{font-size:3.2rem;}
+            .services-grid{grid-template-columns:1fr;}
         }
     </style>
 </head>
@@ -347,7 +298,7 @@
 <div class="hero" id="top">
     <h1>Won Your Court Case But Haven't Been Paid?</h1>
     <p>Winning in court is hard enough. Finding the money can be even harder. We help people and businesses find assets and enforce court judgments so you get paid.</p>
-    <a href="contact.html" class="btn">Get Help Collecting Your Money</a>
+    <a href="contact.html" class="btn">Start Here</a>
 </div>
 
 <section class="quote-section">
@@ -404,7 +355,7 @@
         </div>
         <div class="service-card">
             <h3>Step 3: Place Liens</h3>
-            <p>Once assets are identified, we place liens where available to create leverage and encourage payment through the legal process.</p>
+            <p>Once assets are identified, we place liens where available to create leverage and encourage payment.</p>
         </div>
         <div class="service-card">
             <h3>Step 4: Finalize Payment</h3>
@@ -416,12 +367,13 @@
 <section class="cta-band" id="contact">
     <h2>Become a Client</h2>
     <p>Reach out today and tell us about your judgment so we can help you understand the next step.</p>
-    <a href="contact.html" class="btn">Become a Client</a>
+    <a href="contact.html" class="btn">Start Here</a>
 </section>
 
 <footer>
     <p class="footer-verse">“For the Lord is righteous, he loves justice; the upright will see his face.” — Psalm 11:7</p>
     <p>&copy; 2026 Northwest Judgment Enforcement. All rights reserved.<br>Washington - Idaho - Oregon</p>
+    <p><a href="tel:5098026893" class="footer-phone">509-802-6893</a></p>
 </footer>
 </body>
 </html>
