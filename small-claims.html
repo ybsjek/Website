@@ -237,12 +237,26 @@
             transition:max-height 0.3s ease;
             background:#fff;
         }
-        .accordion-panel.open{max-height:300px;}
+        .accordion-panel.open{max-height:420px;}
         .accordion-panel p{
-            padding:18px 22px 22px;
+            padding:18px 22px 12px;
             font-size:1.02rem;
             color:var(--text-dark);
             line-height:1.75;
+        }
+        .resource-link-list{
+            padding:0 22px 22px;
+            display:grid;
+            gap:10px;
+        }
+        .resource-link-list a{
+            color:var(--primary);
+            text-decoration:none;
+            font-weight:700;
+        }
+        .resource-link-list a:hover{
+            color:var(--secondary);
+            text-decoration:underline;
         }
         .faq-grid{
             display:grid;
@@ -344,7 +358,7 @@
 
 <div class="hero">
     <h1>Small Claims Help and Judgment Collection</h1>
-    <p>If you won a small claims case and still need help collecting, this page walks you through the process. Learn how to file in small claims, what happens after you win, and how judgment enforcement works in Washington, Idaho, and Oregon.</p>
+    <p>If you won a small claims case and still need help collecting, this page explains what to do next. Learn how to file in small claims, what happens after you win, and how judgment enforcement works in Washington, Idaho, and Oregon.</p>
     <a href="#contact" class="btn">Talk With Us</a>
 </div>
 
@@ -352,12 +366,12 @@
     <h2 class="section-title">What Small Claims Means</h2>
     <div class="grid-2">
         <div class="card">
-            <p>Small claims court is designed to resolve lower-dollar disputes in a faster and simpler way than a regular civil lawsuit. Many people use small claims court to recover money for unpaid debts, services, damage, or other financial losses.</p>
-            <p>Winning is an important step, but it is not always the last step. In many cases, the judgment debtor still needs to be located, contacted, and encouraged to pay.</p>
+            <p>Small claims court is designed to resolve lower-dollar disputes in a simpler and faster way than a regular civil case. People often use it to recover unpaid money, damage claims, or other straightforward financial disputes.</p>
+            <p>Winning your case is an important step, but it does not always mean you will be paid right away. In many situations, the judgment debtor still has to be located and encouraged to pay.</p>
         </div>
         <div class="card">
-            <p><strong>Why this page exists:</strong> people search for small claims help, how to file in small claims, how to collect a small claims judgment, and what to do when the judgment debtor does not pay. This page is built around those questions.</p>
-            <p>Our goal is to give clear answers and make it easier to move from judgment to collection.</p>
+            <p><strong>Why this page exists:</strong> many people search for small claims help, how to file in small claims, how to collect a small claims judgment, and what to do when a judgment debtor does not pay. This page is built around those questions.</p>
+            <p>Our goal is to give you clear next steps and help you move from judgment to collection.</p>
         </div>
     </div>
 </section>
@@ -369,21 +383,21 @@
             <div class="step-num">1</div>
             <div>
                 <h3>Identify the claim</h3>
-                <p>Start by figuring out what money is owed, why it is owed, and whether your dispute fits small claims court rules in your state.</p>
+                <p>Start by deciding what money is owed, why it is owed, and whether your dispute fits small claims court rules in your state.</p>
             </div>
         </div>
         <div class="step">
             <div class="step-num">2</div>
             <div>
                 <h3>Prepare the paperwork</h3>
-                <p>Small claims filing usually requires a claim form, filing fee, and basic information about the defendant or judgment debtor.</p>
+                <p>Small claims filing usually requires a claim form, a filing fee, and basic information about the other party.</p>
             </div>
         </div>
         <div class="step">
             <div class="step-num">3</div>
             <div>
                 <h3>Serve the defendant</h3>
-                <p>The defendant must receive proper notice. Filing alone is not enough; service rules matter in every state.</p>
+                <p>The defendant must receive proper notice. Filing the case alone is not enough.</p>
             </div>
         </div>
         <div class="step">
@@ -400,16 +414,16 @@
     <h2 class="section-title">What Happens After You Win</h2>
     <div class="grid-3">
         <div class="mini-card">
-            <h3>You become the creditor</h3>
+            <h3>You become the judgment creditor</h3>
             <p>Once the court rules in your favor, you have a money judgment that may be collected through the next steps in the process.</p>
         </div>
         <div class="mini-card">
             <h3>The court usually does not collect</h3>
-            <p>In most cases, the court does not chase the money for you. You may need to take action to enforce the judgment.</p>
+            <p>In most cases, the court does not collect the money for you. The winning party is usually responsible for post-judgment collection.</p>
         </div>
         <div class="mini-card">
-            <h3>The debtor may still refuse to pay</h3>
-            <p>If the judgment debtor does not pay voluntarily, collection tools may need to be used.</p>
+            <h3>The judgment debtor may not pay voluntarily</h3>
+            <p>If the judgment debtor does not pay on their own, collection tools may be needed.</p>
         </div>
     </div>
 </section>
@@ -417,8 +431,8 @@
 <section>
     <h2 class="section-title">How To Collect A Small Claims Judgment</h2>
     <div class="card">
-        <p>Collecting a small claims judgment may involve contacting the debtor, setting up a payment plan, locating assets, or using judgment enforcement tools such as garnishment or liens where allowed. Court self-help materials in Washington, Idaho, and Oregon all make clear that the winning party is responsible for collection after judgment [web:1345][web:1348][web:1386].</p>
-        <p>If payment does not happen right away, you may need help identifying the best collection path based on the state, the amount owed, and the debtor’s situation. That is where professional judgment collection support can save time and confusion [web:1345][web:1372][web:1354].</p>
+        <p>Collecting a small claims judgment may involve contacting the debtor, setting up a payment plan, locating assets, or using judgment enforcement tools such as garnishment or liens where allowed. Court guidance in Washington, Idaho, and Oregon makes clear that the winning party must take the next steps after judgment [web:1345][web:1381][web:1348][web:1386].</p>
+        <p>If payment does not happen right away, you may need help deciding which collection path makes the most sense based on the state, the amount owed, and the debtor’s situation [web:1372][web:1354].</p>
     </div>
 </section>
 
@@ -428,19 +442,28 @@
         <div class="accordion-item">
             <button class="accordion-btn" type="button" onclick="toggleAccordion(this)">Washington Small Claims <span>+</span></button>
             <div class="accordion-panel">
-                <p>In Washington, once a small claims judgment is entered, the court does not collect the money for you. If the debtor does not pay, the winning party may need to use the collections process, and court resources note that assistance from an attorney or collection agency may be needed [web:1345][web:1381].</p>
+                <p>In Washington, winning a small claims case does not mean the court will collect the money for you. If the debtor does not pay, the winning party may need to use the collection process, and court resources note that help from an attorney or collection agency may sometimes be needed [web:1345][web:1381].</p>
+                <div class="resource-link-list">
+                    <a href="https://www.courts.wa.gov/newsinfo/resources/?fa=newsinfo_jury.scc&altMenu=smal" target="_blank" rel="noopener noreferrer">Washington State Courts - Small Claims Court</a>
+                </div>
             </div>
         </div>
         <div class="accordion-item">
             <button class="accordion-btn" type="button" onclick="toggleAccordion(this)">Idaho Small Claims <span>+</span></button>
             <div class="accordion-panel">
-                <p>Idaho’s court assistance materials include instructions for filing a small claims action and a separate step for enforcing a small claims judgment. They also reference writs and garnishment tools as part of the collection process [web:1348][web:1372][web:1379].</p>
+                <p>Idaho court resources include instructions for filing a small claims action and for collecting on a small claims judgment. Those instructions reference writs, garnishment, and other post-judgment steps [web:1348][web:1372][web:1379].</p>
+                <div class="resource-link-list">
+                    <a href="https://courtselfhelp.idaho.gov/Forms/claims" target="_blank" rel="noopener noreferrer">Idaho Court Assistance Office - Small Claims Forms</a>
+                </div>
             </div>
         </div>
         <div class="accordion-item">
             <button class="accordion-btn" type="button" onclick="toggleAccordion(this)">Oregon Small Claims <span>+</span></button>
             <div class="accordion-panel">
-                <p>Oregon court guidance explains that the judgment creditor is responsible for efforts to collect the money judgment after winning. The guidance also discusses payment plans, satisfaction filings, and other post-judgment steps [web:1386][web:1354].</p>
+                <p>Oregon court guidance explains that the judgment creditor is responsible for collecting the money judgment after winning. It also covers payment plans, satisfaction filings, and other post-judgment steps [web:1386][web:1354].</p>
+                <div class="resource-link-list">
+                    <a href="https://www.courts.oregon.gov/forms/Documents/SC-INSTR-plntf.pdf" target="_blank" rel="noopener noreferrer">Oregon Small Claims Instructions for Plaintiff</a>
+                </div>
             </div>
         </div>
     </div>
@@ -459,7 +482,7 @@
         </div>
         <div class="faq-card">
             <h3>What if the debtor does not pay?</h3>
-            <p>If the debtor does not pay voluntarily, collection and enforcement steps may be necessary.</p>
+            <p>If the debtor does not pay voluntarily, enforcement steps may be needed.</p>
         </div>
         <div class="faq-card">
             <h3>Can you help me understand how to file in small claims?</h3>
@@ -471,7 +494,7 @@
         </div>
         <div class="faq-card">
             <h3>Do you help with unpaid judgments?</h3>
-            <p>Yes. We help with judgment collection and may also discuss whether purchasing a judgment makes sense.</p>
+            <p>Yes. We help with judgment collection and can also discuss whether purchasing a judgment makes sense.</p>
         </div>
     </div>
 </section>
