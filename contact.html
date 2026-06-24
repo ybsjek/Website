@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Northwest Judgment Enforcement</title>
+    <title>Thank You | Northwest Judgment Enforcement</title>
     <style>
         :root{
             --primary:#0f1e36;
@@ -29,28 +29,29 @@
         .hero{
             background:
                 linear-gradient(rgba(15,30,54,0.92),rgba(15,30,54,0.80)),
-                url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+                url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
             padding:210px 20px 120px 20px;
             color:var(--text-light);
             text-align:center;
         }
         .hero h1{font-size:2.8rem;margin-bottom:18px;font-weight:600;}
         .hero p{font-size:1.15rem;max-width:750px;margin:0 auto;color:#cbd5e0;}
-        section{padding:60px 20px;max-width:1200px;margin:0 auto;scroll-margin-top:110px;}
+        section{padding:70px 20px;max-width:1200px;margin:0 auto;scroll-margin-top:110px;}
         .section-title{text-align:center;margin-bottom:18px;position:relative;padding-bottom:15px;font-size:2rem;color:var(--primary);}
         .section-title::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:50px;height:3px;background:var(--secondary);border-radius:2px;}
-        .contact-wrap{display:grid;grid-template-columns:0.9fr 1.1fr;gap:28px;align-items:start;margin-top:0;}
-        .contact-info{background:var(--bg-light);border-left:5px solid var(--secondary);border-radius:var(--roundness);padding:28px;box-shadow:0 8px 24px rgba(0,0,0,0.04);}
-        .contact-info h3{color:var(--primary);margin-bottom:12px;}
-        .contact-info p{margin-bottom:14px;color:var(--text-dark);}
-        .contact-card{background:#fff;border-radius:var(--roundness);box-shadow:0 8px 24px rgba(0,0,0,0.04);border-top:4px solid var(--secondary);padding:30px;}
-        .contact-form{display:grid;gap:16px;}
-        .form-group{display:grid;gap:8px;}
-        label{font-weight:700;color:var(--primary);font-size:0.95rem;}
-        input, select, textarea{width:100%;padding:14px 14px;border:1px solid #d7dce3;border-radius:10px;font-size:1rem;background:#fff;color:var(--text-dark);outline:none;transition:border-color 0.2s, box-shadow 0.2s;}
-        input:focus, select:focus, textarea:focus{border-color:var(--secondary);box-shadow:0 0 0 3px rgba(138,115,85,0.12);}
-        textarea{min-height:160px;resize:vertical;}
-        .btn{background:var(--secondary);color:var(--text-light);padding:14px 28px;text-decoration:none;border:none;border-radius:var(--roundness);font-weight:700;display:inline-block;transition:background 0.25s,transform 0.15s;cursor:pointer;font-size:1rem;}
+        .thank-you-box{
+            max-width:850px;
+            margin:0 auto;
+            background:var(--bg-light);
+            border-left:5px solid var(--secondary);
+            border-radius:var(--roundness);
+            padding:32px;
+            box-shadow:0 8px 24px rgba(0,0,0,0.04);
+            text-align:center;
+        }
+        .thank-you-box h2{color:var(--primary);font-size:1.6rem;margin-bottom:12px;}
+        .thank-you-box p{color:var(--text-dark);font-size:1.05rem;margin-bottom:18px;}
+        .btn{background:var(--secondary);color:var(--text-light);padding:14px 28px;text-decoration:none;border:none;border-radius:var(--roundness);font-weight:700;display:inline-block;transition:background 0.25s,transform 0.15s;cursor:pointer;font-size:1rem;margin:8px 8px 0 8px;}
         .btn:hover{background:#735f43;transform:translateY(-1px);}
         footer{background:var(--primary);color:#a0aec0;padding:50px 20px;text-align:center;font-size:0.95rem;border-top:3px solid var(--secondary);line-height:1.8;width:100%;clear:both;margin-top:40px;}
         .footer-verse{color:#e2e8f0;font-style:italic;margin-bottom:14px;font-size:1rem;}
@@ -61,7 +62,6 @@
             .logo-text{font-size:1.1rem;white-space:normal;text-align:center;}
             nav.top-nav{justify-content:center;flex-wrap:wrap;gap:12px 18px;}
             .hero{padding-top:300px;}
-            .contact-wrap{grid-template-columns:1fr;}
             section{padding-top:45px;padding-bottom:45px;}
         }
     </style>
@@ -76,80 +76,31 @@
         <nav aria-label="Main navigation" class="top-nav">
             <a href="index.html#top">Home</a>
             <a href="Judgment-creditor-education.html">Judgment Creditor Education</a>
-            <a href="contact.html#top">Contact</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </div>
 </header>
 
 <div class="hero" id="top">
-    <h1>Contact Us</h1>
-    <p>Tell us about your judgment and we’ll help you understand the next step.</p>
+    <h1>Thank You</h1>
+    <p>Your inquiry has been submitted. We appreciate you reaching out and will review your information as soon as possible.</p>
 </div>
 
 <section>
-    <h2 class="section-title">Get in Touch</h2>
-
-    <div class="contact-wrap">
-        <div class="contact-info">
-            <h3>We’re Here to Help</h3>
-            <p>Use the form to tell us where your judgment was entered, what kind of case it is, and what you need help with.</p>
-            <p>We review each request carefully and respond with the next step in the process.</p>
-            <p>For the fastest response, include as much detail as possible in the description box.</p>
-        </div>
-
-        <div class="contact-card">
-            <form class="contact-form" action="https://formspree.io/f/xvzjolln" method="POST">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your full name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="_replyto" placeholder="Your email address" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">Phone</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Your phone number">
-                </div>
-
-                <div class="form-group">
-                    <label for="location">Location</label>
-                    <select id="location" name="location">
-                        <option value="">Select a location</option>
-                        <option value="washington">Washington</option>
-                        <option value="idaho">Idaho</option>
-                        <option value="oregon">Oregon</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="judgment-type">Type of Judgment</label>
-                    <select id="judgment-type" name="judgment_type">
-                        <option value="">Select type of judgment</option>
-                        <option value="small_claims">Small Claims</option>
-                        <option value="federal_court">Federal Court</option>
-                        <option value="superior_court">Superior Court</option>
-                        <option value="district_court">District Court</option>
-                        <option value="family_court">Family Court</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="description">Description</label>
-                    <textarea id="description" name="message" placeholder="Tell us about your judgment and what help you need" required></textarea>
-                </div>
-
-                <button type="submit" class="btn">Start My Case Review</button>
-            </form>
+    <h2 class="section-title">We’ve Received Your Message</h2>
+    <div class="thank-you-box">
+        <h2>Thank you for contacting Northwest Judgment Enforcement.</h2>
+        <p>Your form submission was received successfully. A team member will review your request and follow up with the next step.</p>
+        <p>While you wait, you can return to the homepage or explore our education page for more information about the judgment enforcement process.</p>
+        <div>
+            <a href="index.html#top" class="btn">Return Home</a>
+            <a href="Judgment-creditor-education.html" class="btn">View Articles</a>
         </div>
     </div>
 </section>
 
 <footer>
-    <p class="footer-verse">“For the Lord is righteous, He loves justice; the upright will see his face.” — Psalm 11:7</p>
+    <p class="footer-verse">“For the Lord is righteous, he loves justice; the upright will see his face.” — Psalm 11:7</p>
     <p>&copy; 2026 Northwest Judgment Enforcement. All rights reserved.<br>Washington - Idaho - Oregon</p>
 </footer>
 </body>
