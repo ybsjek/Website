@@ -3,10 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="description" content="Contact Northwest Judgment Enforcement for judgment collection and enforcement in Washington, Idaho, and Oregon.">
-    <title>Contact | Northwest Judgment Enforcement</title>
-
+    <title>Become a Client | Northwest Judgment Enforcement</title>
     <style>
         :root{
             --primary:#0f1e36;
@@ -18,226 +15,73 @@
             --roundness:14px;
         }
         html{scroll-behavior:smooth;}
-        *{box-sizing:border-box;margin:0;padding:0;}
-        body{
-            color:var(--text-dark);
-            line-height:1.6;
-            background:#fff;
-            font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
-        }
-        header{
-            background:var(--primary);
-            padding:15px 10px;
-            position:fixed;
-            width:100%;
-            top:0;
-            z-index:1000;
-            box-shadow:0 2px 10px rgba(0,0,0,0.15);
-        }
-        .nav-container{
-            max-width:1200px;
-            margin:0 auto;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            gap:20px;
-        }
-        .logo-container{
-            display:flex;
-            align-items:center;
-            text-decoration:none;
-            gap:12px;
-            min-width:0;
-        }
-        .logo-img{
-            height:52px;
-            width:auto;
-            max-width:120px;
-            object-fit:contain;
-            display:block;
-            flex-shrink:0;
-        }
-        .logo-text{
-            color:var(--text-light);
-            font-size:1.25rem;
-            font-weight:700;
-            letter-spacing:0.3px;
-            line-height:1.1;
-            white-space:nowrap;
-        }
+        *{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;}
+        body{color:var(--text-dark);line-height:1.6;background:#fff;}
+        header{background:var(--primary);padding:15px 10px;position:fixed;width:100%;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,0.15);}
+        .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:20px;}
+        .logo-container{display:flex;align-items:center;text-decoration:none;gap:12px;min-width:0;}
+        .logo-img{height:52px;width:auto;max-width:120px;object-fit:contain;display:block;flex-shrink:0;}
+        .logo-text{color:var(--text-light);font-size:1.25rem;font-weight:700;letter-spacing:0.3px;line-height:1.1;white-space:nowrap;}
         .logo-text span{color:var(--secondary);}
-        nav.top-nav{
-            display:flex;
-            align-items:center;
-            gap:18px;
-            flex-wrap:nowrap;
-            justify-content:flex-end;
-        }
-        nav.top-nav a{
-            color:var(--text-light);
-            text-decoration:none;
-            font-size:0.95rem;
-            transition:color 0.25s;
-            white-space:nowrap;
-        }
+        nav.top-nav{display:flex;align-items:center;gap:18px;flex-wrap:nowrap;justify-content:flex-end;}
+        nav.top-nav a{color:var(--text-light);text-decoration:none;font-size:0.95rem;transition:color 0.25s;white-space:nowrap;margin-left:0;}
         nav.top-nav a:hover{color:var(--secondary);}
         .hero{
             background:
                 linear-gradient(rgba(15,30,54,0.92),rgba(15,30,54,0.80)),
-                url('https://images.unsplash.com/photo-1528747045269-390fe33c19c7?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
-            padding:220px 20px 120px;
+                url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            padding:220px 20px 120px 20px;
             color:var(--text-light);
             text-align:center;
         }
-        .hero h1{
-            font-size:2.8rem;
-            margin-bottom:18px;
-            font-family:'Georgia', serif;
-        }
-        .hero p{
-            font-size:1.12rem;
-            max-width:760px;
-            margin:0 auto;
-            color:#cbd5e0;
-        }
-        section{
-            padding:90px 20px;
-            max-width:1200px;
-            margin:0 auto;
-            scroll-margin-top:110px;
-        }
-        .section-title{
-            text-align:center;
-            margin-bottom:35px;
-            position:relative;
-            padding-bottom:15px;
-            font-size:2rem;
-            color:var(--primary);
-            font-family:'Georgia', serif;
-        }
-        .section-title::after{
-            content:'';
-            position:absolute;
-            bottom:0;
-            left:50%;
-            transform:translateX(-50%);
-            width:50px;
-            height:3px;
-            background:var(--secondary);
-            border-radius:2px;
-        }
-        .contact-grid{
+        .hero h1{font-size:2.8rem;margin-bottom:18px;font-weight:600;}
+        .hero p{font-size:1.15rem;max-width:760px;margin:0 auto;color:#cbd5e0;}
+        section{padding:80px 20px;max-width:1200px;margin:0 auto;scroll-margin-top:110px;}
+        .section-title{text-align:center;margin-bottom:18px;position:relative;padding-bottom:15px;font-size:2rem;color:var(--primary);}
+        .section-title::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:50px;height:3px;background:var(--secondary);border-radius:2px;}
+        .contact-wrap{
             display:grid;
             grid-template-columns:1fr 1fr;
-            gap:24px;
+            gap:28px;
             align-items:start;
         }
-        .card{
-            background:#fff;
-            border-radius:18px;
-            box-shadow:0 8px 24px rgba(0,0,0,0.05);
-            padding:28px;
-            border-top:4px solid var(--secondary);
-        }
-        .card p,.card li{
-            font-size:1.02rem;
-            color:var(--text-dark);
-            line-height:1.75;
-        }
-        .info-list{
-            list-style:none;
-            display:grid;
-            gap:14px;
-            margin-top:14px;
-        }
-        .info-list li{
-            padding:14px 16px;
+        .contact-info,.contact-form{
             background:var(--bg-light);
-            border-radius:12px;
-            border-left:4px solid var(--secondary);
-        }
-        .info-list a{
-            color:inherit;
-            text-decoration:none;
-        }
-        .form-group{
-            margin-bottom:18px;
-        }
-        .form-group label{
-            display:block;
-            margin-bottom:8px;
-            font-weight:700;
-            color:var(--primary);
-        }
-        .form-group input,
-        .form-group textarea,
-        .form-group select{
-            width:100%;
-            padding:14px 15px;
-            border:1px solid #d5dbe3;
-            border-radius:12px;
-            font-size:1rem;
-            font-family:inherit;
-            background:#fff;
-            color:var(--text-dark);
-        }
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus{
-            outline:none;
-            border-color:var(--secondary);
-            box-shadow:0 0 0 3px rgba(138,115,85,0.12);
-        }
-        .form-group textarea{
-            min-height:160px;
-            resize:vertical;
-        }
-        .note-box{
-            background:var(--bg-alt);
             border-left:5px solid var(--secondary);
-            padding:20px 22px;
-            border-radius:14px;
-            margin-top:22px;
+            border-radius:var(--roundness);
+            padding:30px;
+            box-shadow:0 8px 24px rgba(0,0,0,0.04);
         }
-        .note-box p{
-            margin:0;
-            line-height:1.7;
-        }
-        footer{
-            background:var(--primary);
-            color:#a0aec0;
-            padding:50px 20px;
-            text-align:center;
-            font-size:0.95rem;
-            border-top:3px solid var(--secondary);
-            line-height:1.8;
+        .contact-info h2,.contact-form h2{color:var(--primary);margin-bottom:14px;}
+        .contact-info p{margin-bottom:14px;color:var(--text-dark);}
+        form{display:grid;gap:14px;}
+        label{font-weight:700;color:var(--primary);}
+        input,textarea{
             width:100%;
-        }
-        .footer-verse{
-            color:#e2e8f0;
-            font-style:italic;
-            margin-bottom:14px;
+            padding:14px;
+            border:1px solid #d1d5db;
+            border-radius:10px;
             font-size:1rem;
-            font-family:'Georgia', serif;
+            background:#fff;
         }
-        .footer-contact-line{
-            margin:8px 0 10px 0;
-            color:#e2e8f0;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            gap:12px;
-            flex-wrap:wrap;
+        textarea{min-height:160px;resize:vertical;}
+        .btn{
+            background:var(--secondary);
+            color:var(--text-light);
+            padding:14px 28px;
+            text-decoration:none;
+            border:none;
+            border-radius:var(--roundness);
+            font-weight:700;
+            display:inline-block;
+            transition:background 0.25s,transform 0.15s;
+            cursor:pointer;
+            font-size:1rem;
         }
-        .footer-contact-line a,
-        .footer-contact-line a:visited,
-        .footer-contact-line a:active,
-        .footer-contact-line a:hover{
-            color:#e2e8f0 !important;
-            text-decoration:none !important;
-            -webkit-text-fill-color:#e2e8f0 !important;
-        }
-        .footer-divider{color:#a0aec0;}
+        .btn:hover{background:#735f43;transform:translateY(-1px);}
+        .small-note{font-size:0.95rem;color:var(--text-dark);}
+        footer{background:var(--primary);color:#a0aec0;padding:50px 20px;text-align:center;font-size:0.95rem;border-top:3px solid var(--secondary);line-height:1.8;width:100%;clear:both;}
+        .footer-verse{color:#e2e8f0;font-style:italic;margin-bottom:14px;font-size:1rem;}
         @media(max-width:992px){
             .nav-container{flex-direction:column;text-align:center;}
             .logo-container{justify-content:center;}
@@ -245,8 +89,8 @@
             .logo-text{font-size:1.1rem;white-space:normal;text-align:center;}
             nav.top-nav{justify-content:center;flex-wrap:wrap;gap:12px 18px;}
             .hero{padding-top:300px;}
-            .contact-grid{grid-template-columns:1fr;}
-            .hero h1{font-size:2.3rem;}
+            .contact-wrap{grid-template-columns:1fr;}
+            section{padding-top:45px;padding-bottom:45px;}
         }
     </style>
 </head>
@@ -259,58 +103,44 @@
         </a>
         <nav aria-label="Main navigation" class="top-nav">
             <a href="index.html">Home</a>
-            <a href="small-claims.html">Small Claims</a>
             <a href="Judgment-creditor-education.html">Education</a>
             <a href="contact.html">Become a Client</a>
         </nav>
     </div>
 </header>
 
-<div class="hero">
-    <h1>Contact Northwest Judgment Enforcement</h1>
-    <p>Tell us about your judgment, and we’ll help you figure out the next step toward collection.</p>
+<div class="hero" id="top">
+    <h1>Become a Client</h1>
+    <p>Tell us about your judgment and we’ll review your situation and explain the next step.</p>
 </div>
 
 <section>
-    <div class="contact-grid">
-        <div class="card">
-            <p>We help with judgment collection and judgment enforcement in Washington, Idaho, and Oregon.</p>
-            <ul class="info-list">
-                <li><strong>Phone:</strong> <a href="tel:5098026893">509-802-6893</a></li>
-                <li><strong>Email:</strong> <a href="mailto:nwjudgmentenforcement@gmail.com">nwjudgmentenforcement@gmail.com</a></li>
-                <li><strong>Service Area:</strong> Washington, Idaho, Oregon</li>
-            </ul>
-            <div class="note-box">
-                <p>Please include the court, case type, judgment amount, and whether you already have a judgment when you contact us. That helps us respond more efficiently.</p>
-            </div>
+    <h2 class="section-title">Get Started</h2>
+    <div class="contact-wrap">
+        <div class="contact-info">
+            <h2>What to Send</h2>
+            <p>Please include your name, email, phone number, the amount of the judgment, the court, and any details you already know about the debtor’s assets or employment.</p>
+            <p class="small-note">The more information you provide, the easier it is to determine the best path forward.</p>
         </div>
 
-        <div class="card" id="contact-form">
-            <form action="#" method="post">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name">
+        <div class="contact-form">
+            <h2>Client Intake Form</h2>
+            <form name="client-intake" action="thank-you.html" method="GET">
+                <div>
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
-                <div class="form-group">
+                <div>
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                    <input type="tel" id="phone" name="phone">
                 </div>
-                <div class="form-group">
-                    <label for="state">State</label>
-                    <select id="state" name="state">
-                        <option value="">Select a state</option>
-                        <option value="Washington">Washington</option>
-                        <option value="Idaho">Idaho</option>
-                        <option value="Oregon">Oregon</option>
-                    </select>
-                </div>
-                <div class="form-group">
+                <div>
                     <label for="message">Case Details</label>
-                    <textarea id="message" name="message" placeholder="Tell us about your judgment or collection issue"></textarea>
+                    <textarea id="message" name="message" required></textarea>
                 </div>
                 <button type="submit" class="btn">Submit</button>
             </form>
@@ -320,11 +150,6 @@
 
 <footer>
     <p class="footer-verse">“For the Lord is righteous, he loves justice; the upright will see his face.” — Psalm 11:7</p>
-    <p class="footer-contact-line">
-        <a href="tel:5098026893">509-802-6893</a>
-        <span class="footer-divider">|</span>
-        <a href="mailto:nwjudgmentenforcement@gmail.com">nwjudgmentenforcement@gmail.com</a>
-    </p>
     <p>&copy; 2026 Northwest Judgment Enforcement. All rights reserved.<br>Washington - Idaho - Oregon</p>
 </footer>
 </body>
