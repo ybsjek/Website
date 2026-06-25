@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Employment opportunities at Northwest Judgment Enforcement.">
     <title>Employment | Northwest Judgment Enforcement</title>
     <style>
         :root{
@@ -16,7 +17,12 @@
         }
         html{scroll-behavior:smooth;}
         *{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;}
-        body{color:var(--text-dark);line-height:1.6;background:#fff;}
+        body{
+            color:var(--text-dark);
+            line-height:1.6;
+            background:#fff;
+            padding-top:92px;
+        }
         header{
             background:var(--primary);
             padding:15px 10px;
@@ -62,7 +68,7 @@
             display:flex;
             align-items:center;
             gap:18px;
-            flex-wrap:nowrap;
+            flex-wrap:wrap;
             justify-content:flex-end;
         }
         nav.top-nav a{
@@ -81,46 +87,55 @@
             text-align:center;
             padding:180px 20px 120px;
         }
+        .employment-container{
+            max-width:1100px;
+            margin:0 auto;
+        }
         .employment-hero h1{
             font-family:Georgia, serif;
-            font-size:2.7rem;
-            margin-bottom:18px;
+            font-size:2.8rem;
+            margin-bottom:14px;
         }
         .employment-hero p{
             max-width:850px;
-            margin:0 auto 14px;
+            margin:0 auto 12px;
             font-size:1.15rem;
             color:#cbd5e0;
         }
         .hero-email{
             font-size:1.1rem;
             font-weight:600;
-            margin-top:18px;
+            margin-top:22px;
         }
         .hero-email a{
             color:#fff;
             text-decoration:underline;
         }
-        .hero-note{
-            font-size:1rem;
-            color:#e2e8f0;
-        }
         .employment-section{
-            padding:80px 20px;
+            padding:70px 20px;
         }
         .employment-section.alt-bg{
-            background:#f8f9fa;
-        }
-        .employment-container{
-            max-width:1100px;
-            margin:0 auto;
+            background:var(--bg-light);
         }
         .employment-section h2{
             text-align:center;
             font-family:Georgia, serif;
             font-size:2rem;
-            color:#0f1e36;
-            margin-bottom:22px;
+            color:var(--primary);
+            margin-bottom:18px;
+            position:relative;
+            padding-bottom:14px;
+        }
+        .employment-section h2::after{
+            content:'';
+            position:absolute;
+            left:50%;
+            bottom:0;
+            transform:translateX(-50%);
+            width:52px;
+            height:3px;
+            background:var(--secondary);
+            border-radius:2px;
         }
         .offer-grid{
             display:grid;
@@ -130,40 +145,59 @@
         }
         .offer-card{
             background:#fff;
-            border-radius:14px;
+            border-radius:18px;
             padding:24px;
             box-shadow:0 8px 24px rgba(0,0,0,0.08);
-            border-top:4px solid #8a7355;
+            border-top:4px solid var(--secondary);
         }
         .offer-card h3{
-            color:#0f1e36;
+            color:var(--primary);
             margin-bottom:10px;
             font-size:1.2rem;
         }
+        .fit-wrap{
+            max-width:1100px;
+            margin:0 auto;
+            background:#fff;
+            border-radius:18px;
+            padding:28px;
+            box-shadow:0 8px 24px rgba(0,0,0,0.08);
+            border:1px solid rgba(15,30,54,0.08);
+        }
+        .fit-wrap p{
+            margin-bottom:14px;
+            text-align:center;
+        }
         .fit-list{
-            max-width:850px;
-            margin:20px auto 0;
             padding-left:20px;
             line-height:1.8;
             font-size:1.05rem;
+            max-width:900px;
+            margin:0 auto;
         }
         .fit-list li{
             margin-bottom:10px;
         }
         .contact-bottom{
             text-align:center;
+            padding-top:40px;
         }
         .email-line{
-            margin-top:20px;
+            margin-top:18px;
             font-size:1.15rem;
             font-weight:600;
         }
         .email-line a{
-            color:#8a7355;
-            text-decoration:none;
-        }
-        .email-line a:hover{
+            color:var(--secondary);
             text-decoration:underline;
+        }
+        .footer-contact{
+            margin-top:8px;
+            color:#e2e8f0;
+        }
+        .footer-contact a{
+            color:#e2e8f0;
+            text-decoration:none;
         }
         footer{
             background:var(--primary);
@@ -207,18 +241,14 @@
             .logo-container{justify-content:center;}
             .logo-img{height:44px;max-width:105px;}
             .logo-text{font-size:1.1rem;white-space:normal;text-align:center;}
-            nav.top-nav{justify-content:center;flex-wrap:wrap;gap:12px 18px;}
+            nav.top-nav{justify-content:center;gap:12px 18px;}
+            .employment-hero{padding-top:280px;}
+            .offer-grid{grid-template-columns:1fr;}
         }
         @media(max-width:768px){
-            .employment-hero{
-                padding:160px 20px 100px;
-            }
-            .employment-hero h1{
-                font-size:2.1rem;
-            }
-            .offer-grid{
-                grid-template-columns:1fr;
-            }
+            .employment-hero h1{font-size:2.2rem;}
+            .employment-section{padding:60px 20px;}
+            .fit-wrap{padding:22px;}
         }
     </style>
 </head>
@@ -243,36 +273,20 @@
 <main>
     <section class="employment-hero">
         <div class="employment-container">
-            <h1>Want to Work for the Best? Excited about Law and Justice?</h1>
-            <p>
-                We are looking for hardworking, honest, and dependable people who want to grow in a professional
-                legal environment.
-            </p>
+            <h1>Employment Opportunities</h1>
+            <p>Come work for the best in the west.</p>
+            <p>We are looking for hardworking, honest, and dependable people who want to grow in a professional legal environment.</p>
             <p class="hero-email">
-                Apply by email: <a href="mailto:YOUREMAIL@DOMAIN.COM?subject=Employment">YOUREMAIL@DOMAIN.COM</a>
+                <a href="mailto:nwjudgmentenforcement@gmail.com">nwjudgmentenforcement@gmail.com</a>
             </p>
-            <p class="hero-note">Please include <strong>Employment</strong> in the subject line.</p>
+            <p>Send us your resume. We look forward to meeting you.</p>
         </div>
     </section>
 
     <section class="employment-section">
         <div class="employment-container">
             <h2>What We Offer</h2>
-            <p>
-                We provide a professional workplace with opportunities to learn, grow, and gain valuable legal experience.
-                For the right person, this can be a great place to build skills and contribute to meaningful work.
-            </p>
-        </div>
-    </section>
-
-    <section class="employment-section alt-bg">
-        <div class="employment-container">
-            <h2>PreLaw Employment Program</h2>
             <div class="offer-grid">
-                <div class="offer-card">
-                    <h3>Pre-Law Student Focus</h3>
-                    <p>This program is ideal for undergraduate students planning to attend law school who want real experience before applying.</p>
-                </div>
                 <div class="offer-card">
                     <h3>Flexible Hours</h3>
                     <p>We understand school comes first, so we offer flexible scheduling that works around classes and studying.</p>
@@ -285,49 +299,52 @@
                     <h3>Hybrid Work Option</h3>
                     <p>If you prefer, you can work in a hybrid work-from-home style so you can focus on your studies while still gaining experience.</p>
                 </div>
+                <div class="offer-card">
+                    <h3>PreLaw Employment Program</h3>
+                    <p>This program is ideal for undergraduate students planning to attend law school who want real experience before applying.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="employment-section">
+    <section class="employment-section alt-bg">
         <div class="employment-container">
             <h2>Am I a Good Fit?</h2>
-            <p>We are looking for people who are:</p>
-            <ul class="fit-list">
-                <li>Currently in college or already college educated.</li>
-                <li>Honest and trustworthy.</li>
-                <li>Hardworking and reliable.</li>
-                <li>Interested in law, justice, and professional growth.</li>
-                <li>Strong communicators who can write and speak clearly.</li>
-                <li>Detail-oriented, organized, and able to follow instructions.</li>
-                <li>Professional, respectful, and eager to learn.</li>
-                <li>Able to balance responsibilities with school and work.</li>
-            </ul>
+            <div class="fit-wrap">
+                <p>We are looking for people who are:</p>
+                <ul class="fit-list">
+                    <li>Currently in college or already college educated.</li>
+                    <li>Honest and trustworthy.</li>
+                    <li>Hardworking and reliable.</li>
+                    <li>Interested in law, justice, and professional growth.</li>
+                    <li>Strong communicators who can write and speak clearly.</li>
+                    <li>Detail-oriented, organized, and able to follow instructions.</li>
+                    <li>Professional, respectful, and eager to learn.</li>
+                    <li>Able to balance responsibilities with school and work.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
     <section class="employment-section contact-bottom">
         <div class="employment-container">
-            <h2>Ready to Apply?</h2>
-            <p>
-                Send us an email to apply. If you are applying for the PreLaw Employment Program,
-                please include <strong>PreLaw</strong> in the subject line.
-            </p>
+            <h2>Apply for PreLaw Employment</h2>
+            <p>Send us a copy of your resume. We look forward to hearing from you.</p>
             <p class="email-line">
-                <a href="mailto:YOUREMAIL@DOMAIN.COM?subject=Employment">YOUREMAIL@DOMAIN.COM</a>
+                <a href="mailto:nwjudgmentenforcement@gmail.com">nwjudgmentenforcement@gmail.com</a>
             </p>
         </div>
     </section>
 </main>
 
 <footer>
-    <div class="footer-verse">Serving with professionalism, diligence, and integrity.</div>
-    <div class="footer-contact-line">
-        <a href="mailto:YOUREMAIL@DOMAIN.COM">YOUREMAIL@DOMAIN.COM</a>
+    <p class="footer-verse">Serving with professionalism, diligence, and integrity.</p>
+    <p class="footer-contact-line">
+        <a href="tel:5098026893">5098026893</a>
         <span class="footer-divider">|</span>
-        <a href="tel:YOUR-PHONE-NUMBER">YOUR-PHONE-NUMBER</a>
-    </div>
-    <div>© 2026 Northwest Judgment Enforcement. All rights reserved.</div>
+        <a href="mailto:nwjudgmentenforcement@gmail.com">nwjudgmentenforcement@gmail.com</a>
+    </p>
+    <p>&copy; 2026 Northwest Judgment Enforcement. All rights reserved.</p>
 </footer>
 
 </body>
