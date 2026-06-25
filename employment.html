@@ -137,6 +137,12 @@
             background:var(--secondary);
             border-radius:2px;
         }
+        .prelaw-note{
+            max-width:900px;
+            margin:0 auto 30px;
+            text-align:center;
+            font-size:1.08rem;
+        }
         .offer-grid{
             display:grid;
             grid-template-columns:repeat(2,1fr);
@@ -164,9 +170,12 @@
             box-shadow:0 8px 24px rgba(0,0,0,0.08);
             border:1px solid rgba(15,30,54,0.08);
         }
-        .fit-wrap p{
-            margin-bottom:14px;
+        .fit-label{
+            font-size:1.25rem;
+            font-weight:700;
+            color:var(--primary);
             text-align:center;
+            margin-bottom:16px;
         }
         .fit-list{
             padding-left:20px;
@@ -180,7 +189,7 @@
         }
         .contact-bottom{
             text-align:center;
-            padding-top:40px;
+            padding-top:30px;
         }
         .email-line{
             margin-top:18px;
@@ -190,14 +199,6 @@
         .email-line a{
             color:var(--secondary);
             text-decoration:underline;
-        }
-        .footer-contact{
-            margin-top:8px;
-            color:#e2e8f0;
-        }
-        .footer-contact a{
-            color:#e2e8f0;
-            text-decoration:none;
         }
         footer{
             background:var(--primary);
@@ -249,6 +250,7 @@
             .employment-hero h1{font-size:2.2rem;}
             .employment-section{padding:60px 20px;}
             .fit-wrap{padding:22px;}
+            .fit-label{font-size:1.15rem;}
         }
     </style>
 </head>
@@ -285,6 +287,15 @@
 
     <section class="employment-section">
         <div class="employment-container">
+            <h2>PreLaw Program</h2>
+            <p class="prelaw-note">
+                Our PreLaw program is designed for college students who are planning to go to law school and want real legal experience while they study.
+            </p>
+        </div>
+    </section>
+
+    <section class="employment-section alt-bg">
+        <div class="employment-container">
             <h2>What We Offer</h2>
             <div class="offer-grid">
                 <div class="offer-card">
@@ -299,19 +310,15 @@
                     <h3>Hybrid Work Option</h3>
                     <p>If you prefer, you can work in a hybrid work-from-home style so you can focus on your studies while still gaining experience.</p>
                 </div>
-                <div class="offer-card">
-                    <h3>PreLaw Employment Program</h3>
-                    <p>This program is ideal for undergraduate students planning to attend law school who want real experience before applying.</p>
-                </div>
             </div>
         </div>
     </section>
 
-    <section class="employment-section alt-bg">
+    <section class="employment-section">
         <div class="employment-container">
             <h2>Am I a Good Fit?</h2>
             <div class="fit-wrap">
-                <p>We are looking for people who are:</p>
+                <p class="fit-label">We are looking for people who are:</p>
                 <ul class="fit-list">
                     <li>Currently in college or already college educated.</li>
                     <li>Honest and trustworthy.</li>
@@ -329,7 +336,7 @@
     <section class="employment-section contact-bottom">
         <div class="employment-container">
             <h2>Apply for PreLaw Employment</h2>
-            <p>Send us a copy of your resume. We look forward to hearing from you.</p>
+            <p>Send us a copy of your resume. We look forward to meeting you.</p>
             <p class="email-line">
                 <a href="mailto:nwjudgmentenforcement@gmail.com">nwjudgmentenforcement@gmail.com</a>
             </p>
