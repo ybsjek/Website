@@ -80,8 +80,43 @@
         }
         .btn:hover{background:#735f43;transform:translateY(-1px);}
         .small-note{font-size:0.95rem;color:var(--text-dark);}
-        footer{background:var(--primary);color:#a0aec0;padding:50px 20px;text-align:center;font-size:0.95rem;border-top:3px solid var(--secondary);line-height:1.8;width:100%;clear:both;}
-        .footer-verse{color:#e2e8f0;font-style:italic;margin-bottom:14px;font-size:1rem;}
+        footer{
+            background:var(--primary);
+            color:#a0aec0;
+            padding:50px 20px;
+            text-align:center;
+            font-size:0.95rem;
+            border-top:3px solid var(--secondary);
+            line-height:1.8;
+            width:100%;
+            clear:both;
+        }
+        .footer-verse{
+            color:#e2e8f0;
+            font-style:italic;
+            margin-bottom:14px;
+            font-size:1rem;
+        }
+        .footer-contact-line{
+            margin:8px 0 10px 0;
+            color:#e2e8f0;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            gap:12px;
+            flex-wrap:wrap;
+        }
+        .footer-contact-line a,
+        .footer-contact-line a:visited,
+        .footer-contact-line a:active,
+        .footer-contact-line a:hover{
+            color:#e2e8f0 !important;
+            text-decoration:none !important;
+            -webkit-text-fill-color:#e2e8f0 !important;
+        }
+        .footer-divider{
+            color:#a0aec0;
+        }
         @media(max-width:992px){
             .nav-container{flex-direction:column;text-align:center;}
             .logo-container{justify-content:center;}
@@ -149,7 +184,7 @@
 </section>
 
 <footer>
-    <p class="footer-verse">“For the Lord is righteous, He loves justice; the upright will see His face.” — Psalm 11:7</p>
+    <p class="footer-verse">“For the Lord is righteous, he loves justice; the upright will see his face.” — Psalm 11:7</p>
     <p class="footer-contact-line">
         <a href="tel:5098026893">509-802-6893</a>
         <span class="footer-divider">|</span>
