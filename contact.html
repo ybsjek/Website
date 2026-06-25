@@ -97,23 +97,9 @@
         .hero p{
             font-size:1.12rem;
             max-width:760px;
-            margin:0 auto 34px;
+            margin:0 auto;
             color:#cbd5e0;
         }
-        .btn{
-            background:var(--secondary);
-            color:var(--text-light);
-            padding:14px 34px;
-            text-decoration:none;
-            border-radius:var(--roundness);
-            font-weight:700;
-            display:inline-block;
-            transition:background 0.25s,transform 0.15s;
-            border:0;
-            cursor:pointer;
-            font-size:1rem;
-        }
-        .btn:hover{background:#735f43;transform:translateY(-1px);}
         section{
             padding:90px 20px;
             max-width:1200px;
@@ -217,41 +203,6 @@
             margin:0;
             line-height:1.7;
         }
-        .faq-grid{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-            gap:22px;
-        }
-        .faq-card{
-            background:#fff;
-            border-radius:16px;
-            padding:24px;
-            box-shadow:0 8px 24px rgba(0,0,0,0.04);
-            border-top:4px solid var(--secondary);
-        }
-        .faq-card h3{
-            color:var(--primary);
-            font-size:1.08rem;
-            margin-bottom:10px;
-            font-family:'Georgia', serif;
-        }
-        .faq-card p{line-height:1.7;}
-        .cta-band{
-            background:var(--primary);
-            color:var(--text-light);
-            text-align:center;
-            padding:70px 20px;
-        }
-        .cta-band h2{
-            font-size:2rem;
-            margin-bottom:12px;
-            font-family:'Georgia', serif;
-        }
-        .cta-band p{
-            max-width:760px;
-            margin:0 auto 24px auto;
-            color:#cbd5e0;
-        }
         footer{
             background:var(--primary);
             color:#a0aec0;
@@ -318,14 +269,12 @@
 <div class="hero">
     <h1>Contact Northwest Judgment Enforcement</h1>
     <p>Tell us about your judgment, and we’ll help you figure out the next step toward collection.</p>
-    <a href="#contact-form" class="btn">Send a Message</a>
 </div>
 
 <section>
-    <h2 class="section-title">Get In Touch</h2>
     <div class="contact-grid">
         <div class="card">
-            <p><strong>We help with:</strong> judgment collection and judgment enforcement in Washington, Idaho, and Oregon.</p>
+            <p>We help with judgment collection and judgment enforcement in Washington, Idaho, and Oregon.</p>
             <ul class="info-list">
                 <li><strong>Phone:</strong> <a href="tel:5098026893">509-802-6893</a></li>
                 <li><strong>Email:</strong> <a href="mailto:nwjudgmentenforcement@gmail.com">nwjudgmentenforcement@gmail.com</a></li>
@@ -367,30 +316,6 @@
             </form>
         </div>
     </div>
-</section>
-
-<section class="faq-section">
-    <h2 class="section-title">Frequently Asked Questions</h2>
-    <div class="faq-grid">
-        <div class="faq-card">
-            <h3>What kind of cases do you help with?</h3>
-            <p>We help with judgment collection and enforcement matters.</p>
-        </div>
-        <div class="faq-card">
-            <h3>Do you work in my state?</h3>
-            <p>We focus on Washington, Idaho, and Oregon.</p>
-        </div>
-        <div class="faq-card">
-            <h3>How do I start?</h3>
-            <p>Send us your case details using the form or contact us by phone or email.</p>
-        </div>
-    </div>
-</section>
-
-<section class="cta-band">
-    <h2>Need Help With A Judgment?</h2>
-    <p>Reach out today and let us help you understand your options.</p>
-    <a href="#contact-form" class="btn">Contact Us Now</a>
 </section>
 
 <footer>
