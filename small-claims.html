@@ -128,12 +128,13 @@
         }
         header{
             background:var(--primary);
-            padding:15px 10px;
+            padding:14px 10px;
             position:fixed;
             width:100%;
             top:0;
             z-index:1000;
             box-shadow:0 2px 10px rgba(0,0,0,0.15);
+            border-bottom:3px solid rgba(138,115,85,0.35);
         }
         .nav-container{
             max-width:1200px;
@@ -170,18 +171,52 @@
         nav.top-nav{
             display:flex;
             align-items:center;
-            gap:18px;
-            flex-wrap:nowrap;
+            gap:12px;
+            flex-wrap:wrap;
             justify-content:flex-end;
         }
         nav.top-nav a{
+            position:relative;
             color:var(--text-light);
             text-decoration:none;
             font-size:0.95rem;
-            transition:color 0.25s;
+            font-weight:600;
+            padding:10px 16px;
+            border-radius:999px;
+            border:1px solid rgba(255,255,255,0.14);
+            background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+            box-shadow:0 1px 0 rgba(255,255,255,0.05) inset, 0 6px 14px rgba(0,0,0,0.08);
+            transition:transform 0.22s ease, background 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, color 0.22s ease;
             white-space:nowrap;
         }
-        nav.top-nav a:hover{color:var(--secondary);}
+        nav.top-nav a::after{
+            content:'';
+            position:absolute;
+            left:16px;
+            right:16px;
+            bottom:7px;
+            height:2px;
+            border-radius:999px;
+            background:var(--secondary);
+            transform:scaleX(0);
+            transform-origin:center;
+            transition:transform 0.22s ease;
+            opacity:0.95;
+        }
+        nav.top-nav a:hover{
+            color:#fff;
+            background:linear-gradient(180deg, rgba(138,115,85,0.28), rgba(138,115,85,0.16));
+            border-color:rgba(138,115,85,0.85);
+            transform:translateY(-1px);
+            box-shadow:0 8px 18px rgba(0,0,0,0.16);
+        }
+        nav.top-nav a:hover::after{
+            transform:scaleX(1);
+        }
+        nav.top-nav a:focus-visible{
+            outline:2px solid var(--secondary);
+            outline-offset:3px;
+        }
         .hero{
             background:
                 linear-gradient(rgba(15,30,54,0.90),rgba(15,30,54,0.78)),
@@ -471,12 +506,10 @@
     <div class="grid-2">
         <div class="card">
             <p>Small claims court is designed to resolve lower-dollar disputes in a simpler and faster way than a regular civil case. People often use it to recover unpaid money, damage claims, or other straightforward financial disputes.</p>
-            
             <p>Winning your case is an important step, but it does not always mean you will be paid right away. In many situations, the judgment debtor still has to be located and encouraged to pay.</p>
         </div>
         <div class="card">
             <p><strong>Why this page exists:</strong> many people search for small claims help, how to file in small claims, how to collect a small claims judgment, and what to do when a judgment debtor does not pay. This page is built around those questions.</p>
-         
             <p>Our goal is to give you clear next steps and help you move from judgment to collection.</p>
         </div>
     </div>
@@ -538,7 +571,6 @@
     <h2 class="section-title">How To Collect A Small Claims Judgment</h2>
     <div class="card">
         <p>Collecting a small claims judgment may involve contacting the debtor, setting up a payment plan, locating assets, or using judgment enforcement tools such as garnishment or liens.</p>
-       
         <p>If payment does not happen right away, you may need help deciding which collection path makes the most sense based on the state, the amount owed, and the debtor’s situation.</p>
     </div>
 </section>
@@ -610,7 +642,6 @@
     <h2 class="section-title">Small Claims Help For Creditors</h2>
     <div class="card">
         <p>If you won in small claims court, congratulations. That is a real accomplishment!</p>
-      
         <p>We are here to help you understand the next step, whether that means enforcement, collection strategy, or discussing a possible purchase of the judgment.</p>
     </div>
 </section>
